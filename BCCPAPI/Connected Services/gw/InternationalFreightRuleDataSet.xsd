@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/InternationalFreightRuleDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/InternationalFreightRuleDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/InternationalFreightRuleDataSet.xsd" id="InternationalFreightRuleDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="InternationalFreightRuleDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="InternationalAirSurchargeFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalAirSurchargeFreightCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ContinentCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FromWeight" type="xs:double" />
+              <xs:element minOccurs="0" name="ToWeight" type="xs:double" />
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalCommodityType">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CommodityTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FreightCoefficient" type="xs:double" />
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalCountryFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalCountryFreightCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalCountryRegion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CountryCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalFreightCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFreightObjectFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="InterntationalFreightObjectFreightID" type="xs:int" />
+              <xs:element minOccurs="0" name="InternationalFreightObjectCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RowIndex" type="xs:int" />
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFreightObject">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalFreightObjectCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InternationalFreightObjectName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Formula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFreightProperty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="InternationalFreightObjectCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightPropertyCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InternationalFreightPropertyName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFreightPropertyValue">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="InternationalFreightPropertyValueID" type="xs:int" />
+              <xs:element minOccurs="0" name="InternationalFreightPropertyCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Value">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InterntationalFreightObjectFreightID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFreightRegion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InternationalFreightRegionName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFreightRule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="RuleNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="MainFreightStoreProcedure">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ValueAddedServiceFreightStoreProcedure">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MainFreightFormula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ValueAddedServiceFreightFormula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="HasVAT" type="xs:boolean" />
+              <xs:element minOccurs="0" name="VATPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="CommodityCalculationMethod" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="ExchangeType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ExpiredDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CustomerCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="17" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FarRegionFreightType" type="xs:int" />
+              <xs:element minOccurs="0" name="FarRegionCoefficient" type="xs:double" />
+              <xs:element minOccurs="0" name="BatchCalculateMethod" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFreightRuleItemTypeUsing">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CalculateMethod" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFreightStep">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FromWeight" type="xs:double" />
+              <xs:element name="ToWeight" type="xs:double" />
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreightStep" type="xs:double" />
+              <xs:element name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="IsBatch" type="xs:boolean" />
+              <xs:element minOccurs="0" name="TransportType" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalMailFreightRule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalMailFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RuleNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LCAORate" type="xs:double" />
+              <xs:element minOccurs="0" name="MRate" type="xs:double" />
+              <xs:element minOccurs="0" name="ItemRate" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalReturnFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalFreightSharingCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FrieghtPerWeight" type="xs:double" />
+              <xs:element minOccurs="0" name="FreightPerItem" type="xs:double" />
+              <xs:element name="CountryCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransportTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExchangeRateCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TransitCountryCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransitType" type="xs:boolean" />
+              <xs:element minOccurs="0" name="PaymentMethod" type="xs:boolean" />
+              <xs:element minOccurs="0" name="FreightPerBag" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalServiceSurchange">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalServiceSurchangeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="InternationalMainFreightPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="InternationalAirSurchangeFreightPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="Notes">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ValueAddedServiceFreightPercent" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalSurchangeValueAddedServicePercent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FuelSurchangePercent" type="xs:double" />
+              <xs:element name="ValueDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalValueAddedServiceCountryFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalValueAddedServiceCountryFreightCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalValueAddedServiceFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalValueAddedServiceFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalValueAddedServiceFreightCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalValueAddedServiceFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalValueAddedServiceFreightPercentMainFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalValueAddedServiceFreightPercentMainFreightCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PercentMainFreight" type="xs:double" />
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalValueAddedServiceFreightPerItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalValueAddedServiceFreightPerItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FreightPerItem" type="xs:double" />
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MinimumFreight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalValueAddedServiceFreightPerTotalItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalValueAddedServiceFreightPerTotalItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FromNumberOfItem" type="xs:double" />
+              <xs:element minOccurs="0" name="ToNumberOfItem" type="xs:double" />
+              <xs:element minOccurs="0" name="FreightStep" type="xs:double" />
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+              <xs:element minOccurs="0" name="MinimumFreight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalValueAddedServiceFreightPerTotalItemInBatch">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FromNumberOfItem" type="xs:double" />
+              <xs:element minOccurs="0" name="ToNumberOfItem" type="xs:double" />
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+              <xs:element minOccurs="0" name="MinimumFreight" type="xs:double" />
+              <xs:element name="InternationalValueAddedServiceFreightPerTotalItemInBatchCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalValueAddedServiceFreightPerTotalWeight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalValueAddedServiceFreightPerTotalWeightCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalValueAddedServiceFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalValueAddedServiceFreightStep">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalValueAddedServiceFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FromWeight" type="xs:double" />
+              <xs:element name="ToWeight" type="xs:double" />
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreightStep" type="xs:double" />
+              <xs:element name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="IsBatch" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InternationalFarRegionFreightStep">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InternationalFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Freight" type="xs:double" />
+              <xs:element name="FromWeight" type="xs:double" />
+              <xs:element name="ToWeight" type="xs:double" />
+              <xs:element name="FreightStep" type="xs:double" />
+              <xs:element name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element name="InternationalFarRegionFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:InternationalAirSurchargeFreight" />
+      <xs:field xpath="mstns:InternationalAirSurchargeFreightCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalCommodityType_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalCommodityType" />
+      <xs:field xpath="mstns:CommodityTypeCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalCountryFreight_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalCountryFreight" />
+      <xs:field xpath="mstns:InternationalCountryFreightCode" />
+      <xs:field xpath="mstns:InternationalFreightStepCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:CountryCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalCountryRegion_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalCountryRegion" />
+      <xs:field xpath="mstns:CountryCode" />
+      <xs:field xpath="mstns:InternationalFreightRegionCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFreight_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFreight" />
+      <xs:field xpath="mstns:InternationalFreightCode" />
+      <xs:field xpath="mstns:InternationalFreightStepCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:InternationalFreightRegionCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFreightObjectFreight_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFreightObjectFreight" />
+      <xs:field xpath="mstns:InterntationalFreightObjectFreightID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFreightObject_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFreightObject" />
+      <xs:field xpath="mstns:InternationalFreightObjectCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFreightProperty_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFreightProperty" />
+      <xs:field xpath="mstns:InternationalFreightPropertyCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFreightPropertyValue_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFreightPropertyValue" />
+      <xs:field xpath="mstns:InternationalFreightPropertyValueID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFreightRegion_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFreightRegion" />
+      <xs:field xpath="mstns:InternationalFreightRegionCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFreightRule_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFreightRule" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFreightRuleItemTypeUsing_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFreightRuleItemTypeUsing" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:ItemTypeCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFreightStep_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFreightStep" />
+      <xs:field xpath="mstns:InternationalFreightStepCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalMailFreightRule_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalMailFreightRule" />
+      <xs:field xpath="mstns:InternationalMailFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalReturnFreight_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalReturnFreight" />
+      <xs:field xpath="mstns:InternationalFreightSharingCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:CountryCode" />
+      <xs:field xpath="mstns:TransportTypeCode" />
+      <xs:field xpath="mstns:TransitCountryCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalServiceSurchange_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalServiceSurchange" />
+      <xs:field xpath="mstns:InternationalServiceSurchangeCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueDate" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalSurchangeValueAddedServicePercent_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalSurchangeValueAddedServicePercent" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:ValueDate" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalValueAddedServiceCountryFreight_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalValueAddedServiceCountryFreight" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceCountryFreightCode" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightStepCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:CountryCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalValueAddedServiceFreight_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalValueAddedServiceFreight" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightCode" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightStepCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:InternationalFreightRegionCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalValueAddedServiceFreightPercentMainFreight_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalValueAddedServiceFreightPercentMainFreight" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightPercentMainFreightCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalValueAddedServiceFreightPerItem_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalValueAddedServiceFreightPerItem" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightPerItemCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalValueAddedServiceFreightPerTotalItem_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalValueAddedServiceFreightPerTotalItem" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightPerTotalItemCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalValueAddedServiceFreightPerTotalItemInBatch_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalValueAddedServiceFreightPerTotalItemInBatch" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightPerTotalItemInBatchCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalValueAddedServiceFreightPerTotalWeight_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalValueAddedServiceFreightPerTotalWeight" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightPerTotalWeightCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightStepCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalValueAddedServiceFreightStep_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalValueAddedServiceFreightStep" />
+      <xs:field xpath="mstns:InternationalValueAddedServiceFreightStepCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="InternationalFarRegionFreightStep_Constraint1">
+      <xs:selector xpath=".//mstns:InternationalFarRegionFreightStep" />
+      <xs:field xpath="mstns:InternationalFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:InternationalFarRegionFreightStepCode" />
+      <xs:field xpath="mstns:ItemTypeCode" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_InternationalAirSurchargeFreight_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalAirSurchargeFreight" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK_InternationalCommodityType_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalCommodityType" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalCountryFreight_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalCountryFreight" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalCountryRegion_InternationalFreightRegion" msdata:parent="InternationalFreightRegion" msdata:child="InternationalCountryRegion" msdata:parentkey="InternationalFreightRegionCode ServiceCode InternationalFreightRuleCode" msdata:childkey="InternationalFreightRegionCode ServiceCode InternationalFreightRuleCode" />
+      <msdata:Relationship name="FK_InternationalFreight_InternationalFreightRegion" msdata:parent="InternationalFreightRegion" msdata:child="InternationalFreight" msdata:parentkey="InternationalFreightRegionCode ServiceCode InternationalFreightRuleCode" msdata:childkey="InternationalFreightRegionCode ServiceCode InternationalFreightRuleCode" />
+      <msdata:Relationship name="FK_InternationalFreight_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalFreight" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalFreight_InternationalFreightStep" msdata:parent="InternationalFreightStep" msdata:child="InternationalFreight" msdata:parentkey="InternationalFreightStepCode ServiceCode InternationalFreightRuleCode" msdata:childkey="InternationalFreightStepCode ServiceCode InternationalFreightRuleCode" />
+      <msdata:Relationship name="FK_InternationalFreightObjectFreight_InternationalFreightObject" msdata:parent="InternationalFreightObject" msdata:child="InternationalFreightObjectFreight" msdata:parentkey="InternationalFreightObjectCode" msdata:childkey="InternationalFreightObjectCode" />
+      <msdata:Relationship name="FK_InternationalFreightObject_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalFreightObject" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalFreightProperty_InternationalFreightObject" msdata:parent="InternationalFreightObject" msdata:child="InternationalFreightProperty" msdata:parentkey="InternationalFreightObjectCode" msdata:childkey="InternationalFreightObjectCode" />
+      <msdata:Relationship name="FK_InternationalFreightPropertyValue_InternationalFreightObjectFreight" msdata:parent="InternationalFreightObjectFreight" msdata:child="InternationalFreightPropertyValue" msdata:parentkey="InterntationalFreightObjectFreightID" msdata:childkey="InterntationalFreightObjectFreightID" />
+      <msdata:Relationship name="FK_InternationalFreightPropertyValue_InternationalFreightProperty" msdata:parent="InternationalFreightProperty" msdata:child="InternationalFreightPropertyValue" msdata:parentkey="InternationalFreightPropertyCode" msdata:childkey="InternationalFreightPropertyCode" />
+      <msdata:Relationship name="FK_InternationalFreightRegion_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalFreightRegion" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalFreightRuleItemTypeUsing_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalFreightRuleItemTypeUsing" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalValueAddedServiceCountryFreight_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalValueAddedServiceCountryFreight" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalValueAddedServiceCountryFreight_InternationalValueAddedServiceFreightStep" msdata:parent="InternationalValueAddedServiceFreightStep" msdata:child="InternationalValueAddedServiceCountryFreight" msdata:parentkey="InternationalValueAddedServiceFreightStepCode ServiceCode InternationalFreightRuleCode" msdata:childkey="InternationalValueAddedServiceFreightStepCode ServiceCode InternationalFreightRuleCode" />
+      <msdata:Relationship name="FK_InternationalValueAddedServiceFreightPerItem_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalValueAddedServiceFreightPerItem" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalValueAddedServiceFreightPerTotalItem_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalValueAddedServiceFreightPerTotalItem" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalValueAddedServiceFreightPerTotalWeight_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalValueAddedServiceFreightPerTotalWeight" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+      <msdata:Relationship name="FK_InternationalValueAddedServiceFreightPerTotalWeight_InternationalValueAddedServiceFreightStep" msdata:parent="InternationalValueAddedServiceFreightStep" msdata:child="InternationalValueAddedServiceFreightPerTotalWeight" msdata:parentkey="InternationalValueAddedServiceFreightStepCode ServiceCode InternationalFreightRuleCode" msdata:childkey="InternationalValueAddedServiceFreightStepCode ServiceCode InternationalFreightRuleCode" />
+      <msdata:Relationship name="FK_InternationalFarRegionFreightStep_InternationalFreightRule" msdata:parent="InternationalFreightRule" msdata:child="InternationalFarRegionFreightStep" msdata:parentkey="InternationalFreightRuleCode ServiceCode" msdata:childkey="InternationalFreightRuleCode ServiceCode" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

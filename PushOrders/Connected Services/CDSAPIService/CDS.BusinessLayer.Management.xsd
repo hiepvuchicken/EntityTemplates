@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Management" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Management" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/PTC.BusinessLayer.Core" />
+  <xs:complexType name="ArrayOfRestrictionProhibition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RestrictionProhibition" nillable="true" type="tns:RestrictionProhibition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRestrictionProhibition" nillable="true" type="tns:ArrayOfRestrictionProhibition" />
+  <xs:complexType name="RestrictionProhibition">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PTC.BusinessLayer.Core" base="q1:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AdditionalDocFileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromHSCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HSCodeList" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrganizationCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PCategory" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RestrictedCountries" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RestrictionNote" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToHSCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WebsiteInfo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RestrictionProhibition" nillable="true" type="tns:RestrictionProhibition" />
+</xs:schema>

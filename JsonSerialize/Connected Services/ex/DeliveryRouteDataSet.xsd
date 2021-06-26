@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DeliveryRouteDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DeliveryRouteDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DeliveryRouteDataSet.xsd" id="DeliveryRouteDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DeliveryRouteDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DeliveryRoute">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DelieveryRouteCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FromPOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliverRouteName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DeliveryRouteName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DeliveryRouteService">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DeliveryRouteCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FromPOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PostmanDeliveryRoute">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DelieveryRouteCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FromPOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PostmanCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:DeliveryRoute" />
+      <xs:field xpath="mstns:DelieveryRouteCode" />
+      <xs:field xpath="mstns:FromPOSCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DeliveryRouteService_Constraint1">
+      <xs:selector xpath=".//mstns:DeliveryRouteService" />
+      <xs:field xpath="mstns:DeliveryRouteCode" />
+      <xs:field xpath="mstns:FromPOSCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="PostmanDeliveryRoute_Constraint1">
+      <xs:selector xpath=".//mstns:PostmanDeliveryRoute" />
+      <xs:field xpath="mstns:DelieveryRouteCode" />
+      <xs:field xpath="mstns:FromPOSCode" />
+      <xs:field xpath="mstns:PostmanCode" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_DeliveryRouteService_DeliveryRoute" msdata:parent="DeliveryRoute" msdata:child="DeliveryRouteService" msdata:parentkey="DelieveryRouteCode FromPOSCode" msdata:childkey="DeliveryRouteCode FromPOSCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK_PostmanDeliveryRoute_DeliveryRoute" msdata:parent="DeliveryRoute" msdata:child="PostmanDeliveryRoute" msdata:parentkey="DelieveryRouteCode FromPOSCode" msdata:childkey="DelieveryRouteCode FromPOSCode" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

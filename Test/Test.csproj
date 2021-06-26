@@ -1,0 +1,1504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AC88119-A300-4872-BC9A-316C4DB2BF27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.5.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=7.11.0.41046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Doc.7.11.0\lib\net46\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.46, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Doc.7.11.0\lib\net46\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=5.11.0.2046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Doc.7.11.0\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\cfmUatService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ExchangeReal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ExchangeServiceDomain\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ExchangeServiceUAT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Connected Services\cfmUatService\Service.wsdl" />
+    <None Include="Connected Services\ExchangeReal\BatchDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\BC37DataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\BD29DataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\CODDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\CommodityTypeDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\DeliveryDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\DeliveryRouteDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\DomesticFreightRuleDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\ExchangeService.wsdl" />
+    <None Include="Connected Services\ExchangeReal\InternationalFreightRuleDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\item.wsdl" />
+    <None Include="Connected Services\ExchangeReal\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeReal\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeReal\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeReal\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeReal\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeReal\item5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeReal\ItemDataSet.xsc">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\ItemDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\ItemDataSet.xss">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\ItemTypeDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\MailRouteDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\MailRouteScheduleDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\MailTripDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\MailTripTransportDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\PayPostDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\POSDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\RevenueDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddBC37Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddBC37_PDAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddCommodityTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddDeliveryPDAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddDomesticFreightRuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddInternationalFreightRuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddItemNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddItemTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddMailtripResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddMailtripTransportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddRevenueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddTraceItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddTracePostBagResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.AddValueAddedServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.BatchDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.BC37DataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.BD29DataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.CheckListItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.CODDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.CommodityTypeDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.ComparisonCODResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.CreateVNPUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.DeliveryDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.DeliveryRouteDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.DomesticFreightRuleDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAcceptedItemListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAffairByDateTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAffairHuyCODResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAllDeliveryRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAllMailRoutePOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAllMailRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAllMailRouteScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAllMailTripEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAllMailTripEMS_Statistic_DelayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAllPOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetAllUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetBC37ByBC37CodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetBC37EMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetBC37Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetBC37V30Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetCountDeliveryEMSNotInBCCPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetCountMailTripBCCPNotInEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetCountMailTripEMSNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetCountMailTripEMSNotInBCCPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetDataForSyncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetDeliveryEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetDeliveryForRecheckHOST2TCTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetDeliveryItemListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetDeliveryRouteForDeliveryAgainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetEMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetListDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetListItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetListPosProvinceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailTripEMSNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailTripEMSPOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailTripEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailTripListEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailTripListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailTripResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailTripToPosInDayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailtripTransportByTransportCodeAndTransportDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailtripTransportByTransportDateAndFromPOSCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailtripTransportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetMailTrip_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetSchemaForSyncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GetTracePostBagResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GPS_GetDispatchesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.GPS_GetIncompleteBD10sByVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.ImportBD29AllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.INQUIRY_COD_INResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.INQUIRY_COD_OUTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.INQUIRY_COD_PAIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.INQUIRY_COD_RECEIVEDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.INQUIRY_PARCEL_INFOResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.INQUIRY_PARCEL_INFO_HSXTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.InternationalFreightRuleDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.ItemDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.ItemTypeDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.MailRouteDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.MailTripDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.MailTripListDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.MailTripTransportDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.Messages.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.OE_GetDataClientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.PAYMENT_COD_INResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.PAYMENT_COD_OUTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.PayPostDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.PayPost_InquiryParcelInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.PayPost_RevertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.PayPost_UpdatePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.POSDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.PushDeliveryInfo1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.PushDeliveryInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.ReAddTraceItemFullResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.ReAddTraceItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.RecheckDeliveryEMS2HOSTAgainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.RecheckDeliveryEMS2HOSTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.RecheckDeliveryHost2TCTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.RecheckEMSMailtripEMS2TCTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.RecheckEMSMailtripResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.RevenueDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.REVERT_CODResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.SaveAllMailtripEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.SaveBatchDeliveryPDAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.SaveBatchDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.SaveDeliveryEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.SetAffairHuyCodMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.SyncSchemaCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.SyncTableAndDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.SyncTableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.testResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.TraceItemDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.TracePostBagDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.UnitDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.UpdateBC37EMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.UpdateEMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.UpdateMailTripEMSDataSetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.UpdateMailTripEMSGetedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.UpdateMailTripEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.UpdateTransferTimeEMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.UPDATE_ISSUE_RESULTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\Test.ExchangeReal.ValueAddedServiceDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeReal\TraceItemDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\TracePostBagDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\UnitDataSet.xsd" />
+    <None Include="Connected Services\ExchangeReal\ValueAddedServiceDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\BatchDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\BC37DataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\BD29DataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\CODDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\CommodityTypeDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\Ctin.Css.ExchangeService.wsdl" />
+    <None Include="Connected Services\ExchangeServiceDomain\Ctin.Oe.DAO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\DeliveryDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\DeliveryRouteDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\DomesticFreightRuleDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\InternationalFreightRuleDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\ItemDataSet.xsc">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\ItemDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\ItemDataSet.xss">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\ItemTypeDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\MailRouteDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\MailTripDataSet.xsc">
+      <DependentUpon>MailTripDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\MailTripDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\MailTripDataSet.xss">
+      <DependentUpon>MailTripDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\MailTripListDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\MailTripTransportDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\PayPostDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\POSDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\RevenueDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\service.wsdl" />
+    <None Include="Connected Services\ExchangeServiceDomain\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\System.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddBC37Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddBC37_PDAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddCommodityTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddDeliveryPDAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddDomesticFreightRuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddInternationalFreightRuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddItemNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddItemTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddMailtripResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddMailtripTransportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddRevenueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddTraceItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddTracePostBagResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.AddValueAddedServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.BatchDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.BC37DataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.BD29DataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.CheckListItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.CODDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.CommodityTypeDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.ComparisonCODResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.CreateVNPUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.DeliveryDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.DeliveryRouteDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.DomesticFreightRuleDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAcceptedItemListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAffairByDateTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAffairHuyCODResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAllDeliveryRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAllMailRoutePOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAllMailRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAllMailRouteScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAllMailTripEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAllMailTripEMS_Statistic_DelayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAllPOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetAllUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetBC37ByBC37CodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetBC37EMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetBC37Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetBC37V30Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetCountDeliveryEMSNotInBCCPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetCountMailTripBCCPNotInEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetCountMailTripEMSNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetCountMailTripEMSNotInBCCPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetDataForSyncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetDeliveryEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetDeliveryForRecheckHOST2TCTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetDeliveryItemListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetDeliveryRouteForDeliveryAgainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetEMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetListDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetListItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetListPosProvinceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailTripEMSNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailTripEMSPOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailTripEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailTripListEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailTripListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailTripResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailTripToPosInDayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailtripTransportByTransportCodeAndTransportDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailtripTransportByTransportDateAndFromPOSCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailtripTransportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetMailTrip_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetSchemaForSyncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GetTracePostBagResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GPS_GetDispatchesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.GPS_GetIncompleteBD10sByVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.ImportBD29AllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.INQUIRY_COD_INResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.INQUIRY_COD_OUTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.INQUIRY_COD_PAIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.INQUIRY_COD_RECEIVEDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.INQUIRY_PARCEL_INFOResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.INQUIRY_PARCEL_INFO_HSXTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.InternationalFreightRuleDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.ItemDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.ItemTypeDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.MailRouteDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.MailTripDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.MailTripListDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.MailTripTransportDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.Messages.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.OE_GetDataClientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.PAYMENT_COD_INResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.PAYMENT_COD_OUTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.PayPostDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.PayPost_InquiryParcelInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.PayPost_RevertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.PayPost_UpdatePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.POSDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.PushDeliveryInfo1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.PushDeliveryInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.ReAddTraceItemFullResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.ReAddTraceItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.RecheckDeliveryEMS2HOSTAgainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.RecheckDeliveryEMS2HOSTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.RecheckDeliveryHost2TCTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.RecheckEMSMailtripEMS2TCTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.RecheckEMSMailtripResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.RevenueDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.REVERT_CODResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.SaveAllMailtripEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.SaveBatchDeliveryPDAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.SaveBatchDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.SaveDeliveryEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.SetAffairHuyCodMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.SyncSchemaCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.SyncTableAndDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.SyncTableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.testResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.TraceItemDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.TracePostBagDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.UnitDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.UpdateBC37EMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.UpdateEMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.UpdateMailTripEMSDataSetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.UpdateMailTripEMSGetedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.UpdateMailTripEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.UpdateTransferTimeEMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.UPDATE_ISSUE_RESULTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\Test.ExchangeServiceDomain.ValueAddedServiceDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceDomain\TraceItemDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\TracePostBagDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\UnitDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceDomain\ValueAddedServiceDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\BatchDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\BC37DataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\BD29DataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\CODDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\CommodityTypeDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\Ctin.Css.ExchangeService.wsdl" />
+    <None Include="Connected Services\ExchangeServiceUAT\Ctin.Oe.DAO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\DeliveryDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\DeliveryRouteDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\DomesticFreightRuleDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\InternationalFreightRuleDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\ItemDataSet.xsc">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\ItemDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\ItemDataSet.xss">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\ItemTypeDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\MailRouteDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\MailTripDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\MailTripListDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\MailTripTransportDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\PayPostDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\POSDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\RevenueDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\service.wsdl" />
+    <None Include="Connected Services\ExchangeServiceUAT\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\System.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddBC37Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddBC37_PDAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddCommodityTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddDeliveryPDAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddDomesticFreightRuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddInternationalFreightRuleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddItemNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddItemTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddMailtripResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddMailtripTransportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddRevenueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddTraceItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddTracePostBagResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.AddValueAddedServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.BatchDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.BC37DataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.BD29DataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.CheckListItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.CODDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.CommodityTypeDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.ComparisonCODResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.CreateVNPUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.DeliveryDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.DeliveryRouteDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.DomesticFreightRuleDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAcceptedItemListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAffairByDateTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAffairHuyCODResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAllDeliveryRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAllMailRoutePOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAllMailRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAllMailRouteScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAllMailTripEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAllMailTripEMS_Statistic_DelayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAllPOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetAllUnitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetBC37ByBC37CodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetBC37EMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetBC37Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetBC37V30Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetCountDeliveryEMSNotInBCCPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetCountMailTripBCCPNotInEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetCountMailTripEMSNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetCountMailTripEMSNotInBCCPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetDataForSyncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetDeliveryEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetDeliveryForRecheckHOST2TCTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetDeliveryItemListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetDeliveryRouteForDeliveryAgainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetEMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetListDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetListItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetListPosProvinceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailTripEMSNewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailTripEMSPOSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailTripEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailTripListEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailTripListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailTripResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailTripToPosInDayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailtripTransportByTransportCodeAndTransportDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailtripTransportByTransportDateAndFromPOSCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailtripTransportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetMailTrip_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetSchemaForSyncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GetTracePostBagResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GPS_GetDispatchesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.GPS_GetIncompleteBD10sByVehicleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.ImportBD29AllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.INQUIRY_COD_INResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.INQUIRY_COD_OUTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.INQUIRY_COD_PAIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.INQUIRY_COD_RECEIVEDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.INQUIRY_PARCEL_INFOResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.INQUIRY_PARCEL_INFO_HSXTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.InternationalFreightRuleDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.ItemDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.ItemTypeDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.MailRouteDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.MailTripDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.MailTripListDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.MailTripTransportDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.Messages.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.OE_GetDataClientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.PAYMENT_COD_INResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.PAYMENT_COD_OUTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.PayPostDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.PayPost_InquiryParcelInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.PayPost_RevertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.PayPost_UpdatePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.POSDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.PushDeliveryInfo1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.PushDeliveryInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.ReAddTraceItemFullResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.ReAddTraceItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.RecheckDeliveryEMS2HOSTAgainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.RecheckDeliveryEMS2HOSTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.RecheckDeliveryHost2TCTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.RecheckEMSMailtripEMS2TCTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.RecheckEMSMailtripResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.RevenueDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.REVERT_CODResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.SaveAllMailtripEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.SaveBatchDeliveryPDAResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.SaveBatchDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.SaveDeliveryEMS_StatisticResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.SetAffairHuyCodMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.SyncSchemaCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.SyncTableAndDeleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.SyncTableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.testResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.TraceItemDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.TracePostBagDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.UnitDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.UpdateBC37EMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.UpdateEMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.UpdateMailTripEMSDataSetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.UpdateMailTripEMSGetedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.UpdateMailTripEMSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.UpdateTransferTimeEMSDeliveryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.UPDATE_ISSUE_RESULTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\Test.ExchangeServiceUAT.ValueAddedServiceDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ExchangeServiceUAT\TraceItemDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\TracePostBagDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\UnitDataSet.xsd" />
+    <None Include="Connected Services\ExchangeServiceUAT\ValueAddedServiceDataSet.xsd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\cfmUatService\" />
+    <WCFMetadataStorage Include="Connected Services\ExchangeReal\" />
+    <WCFMetadataStorage Include="Connected Services\ExchangeServiceDomain\" />
+    <WCFMetadataStorage Include="Connected Services\ExchangeServiceUAT\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\cfmUatService\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\cfmUatService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\cfmUatService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\cfmUatService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ExchangeServiceDomain\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ExchangeServiceDomain\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ExchangeServiceDomain\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ExchangeServiceUAT\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ExchangeServiceUAT\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ExchangeServiceUAT\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ExchangeReal\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ExchangeReal\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ExchangeReal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="RevenueDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="RevenueDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/RevenueDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PayPostDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="PayPostDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/PayPostDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element ref="xs:schema" />
+        <xs:any />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BD29DataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="BD29DataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/BD29DataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MailTripTransportDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="MailTripTransportDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/MailTripTransportDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BC37DataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="BC37DataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/BC37DataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CODDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="CODDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/CODDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraceItemDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="TraceItemDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/TraceItemDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TracePostBagDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="TracePostBagDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/TracePostBagDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="POSDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="POSDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/POSDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="UnitDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/UnitDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MailRouteDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="MailRouteDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/MailRouteDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeliveryRouteDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DeliveryRouteDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DeliveryRouteDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ItemTypeDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="ItemTypeDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/ItemTypeDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValueAddedServiceDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="ValueAddedServiceDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/ValueAddedServiceDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommodityTypeDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="CommodityTypeDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/CommodityTypeDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DomesticFreightRuleDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DomesticFreightRuleDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DomesticFreightRuleDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InternationalFreightRuleDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="InternationalFreightRuleDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/InternationalFreightRuleDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeliveryDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DeliveryDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DeliveryDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ItemDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="ItemDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/ItemDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BatchDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="BatchDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/BatchDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MailTripDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="MailTripDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/MailTripDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MailTripListDataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="MailTripListDataSet" Namespace="http://schemas.datacontract.org/2004/07/Ctin.Css.ExchangeService.DataSets" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/MailTripListDataSet.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

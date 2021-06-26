@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c417535c-1941-4d8f-a9a1-be2d19982928" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2016/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="56bc12c0-7111-4204-ba0b-f35e8fcf6c6e" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd3" />
+    <MetadataFile FileName="DomesticFreightRuleDataSet.xsd" MetadataType="Schema" ID="dab6395a-537b-4a06-950e-45459ff9f6af" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd21" />
+    <MetadataFile FileName="RevenueDataSet.xsd" MetadataType="Schema" ID="1004c356-9d74-4b27-8847-3b63b26a38eb" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd2" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="12d50059-c349-4a23-88e0-c520e2f38e40" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd5" />
+    <MetadataFile FileName="DeliveryRouteDataSet.xsd" MetadataType="Schema" ID="c23e56d5-baab-4fc9-9c25-91e22d11a8f2" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd17" />
+    <MetadataFile FileName="MailTripDataSet.xsd" MetadataType="Schema" ID="b4fbb8a0-5667-4cd5-a3fa-7ed438583341" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd26" />
+    <MetadataFile FileName="BC37DataSet.xsd" MetadataType="Schema" ID="fe01ad60-a736-4fe1-9432-23586cda1a0e" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd10" />
+    <MetadataFile FileName="CODDataSet.xsd" MetadataType="Schema" ID="ff1b3c8f-3ab5-4c47-909d-bc61caab5e73" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd11" />
+    <MetadataFile FileName="CommodityTypeDataSet.xsd" MetadataType="Schema" ID="d6ed9d2f-f12f-4cce-8c13-93d1afd7aa4b" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd20" />
+    <MetadataFile FileName="ItemDataSet.xsd" MetadataType="Schema" ID="7d28ff45-5309-4f71-a113-f764f2d291d3" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd24" />
+    <MetadataFile FileName="MailRouteDataSet.xsd" MetadataType="Schema" ID="570c67e0-a002-454b-bf5f-0d0d24227af5" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd16" />
+    <MetadataFile FileName="TracePostBagDataSet.xsd" MetadataType="Schema" ID="ebac1dc9-c0db-4137-9bd7-d7d356675cd5" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd13" />
+    <MetadataFile FileName="BD29DataSet.xsd" MetadataType="Schema" ID="611f3203-e5db-41b7-ac8b-0f06c0246344" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd8" />
+    <MetadataFile FileName="DeliveryDataSet.xsd" MetadataType="Schema" ID="9b31517d-2f31-48b4-8cd3-e9b0a03188de" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd23" />
+    <MetadataFile FileName="ValueAddedServiceDataSet.xsd" MetadataType="Schema" ID="c96583ad-1c25-4133-a9f7-999a454fb1e6" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd19" />
+    <MetadataFile FileName="TraceItemDataSet.xsd" MetadataType="Schema" ID="18af2bf5-d6d8-4753-9fd1-6c5a48dd44fd" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd12" />
+    <MetadataFile FileName="BatchDataSet.xsd" MetadataType="Schema" ID="081258cc-52cd-430d-aa35-d0e032d1dbba" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd25" />
+    <MetadataFile FileName="InternationalFreightRuleDataSet.xsd" MetadataType="Schema" ID="06cbf758-47ee-4177-ab0a-c990f87bee7f" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd22" />
+    <MetadataFile FileName="ExchangeService.wsdl" MetadataType="Wsdl" ID="3162d4c6-f06f-400a-a1a4-fbf1e55fe7ac" SourceId="1" SourceUrl="http://localhost:2016/?wsdl" />
+    <MetadataFile FileName="ItemTypeDataSet.xsd" MetadataType="Schema" ID="46adf5eb-6dfe-4f19-aea9-20c4e8f51eea" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd18" />
+    <MetadataFile FileName="UnitDataSet.xsd" MetadataType="Schema" ID="6b3567ed-46f8-4bbb-b973-8454dc352331" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd15" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="6473d786-a1b2-47fa-b0b3-632e5d363c66" SourceId="1" SourceUrl="http://localhost:2016/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="934570f3-0e94-48d0-b005-3cdc4ae1d79b" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd1" />
+    <MetadataFile FileName="PayPostDataSet.xsd" MetadataType="Schema" ID="d328f5dc-6280-46cf-aa5b-48121f295244" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd4" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="aa737fa4-a1cd-48ac-a3f8-3ab6bcd0f0e4" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd7" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="96e54acf-0d5d-4dc0-a155-4d9a6724a102" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd6" />
+    <MetadataFile FileName="MailTripTransportDataSet.xsd" MetadataType="Schema" ID="8321518a-273b-40d2-b4cb-666dec0a983d" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd9" />
+    <MetadataFile FileName="POSDataSet.xsd" MetadataType="Schema" ID="482e4f09-ce72-4acc-8df5-5f0afa20f762" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd14" />
+    <MetadataFile FileName="MailTripListDataSet.xsd" MetadataType="Schema" ID="4ebc3abc-e646-41d5-aac6-473d9241cad4" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd27" />
+    <MetadataFile FileName="item.wsdl" MetadataType="Wsdl" ID="ad5589ab-dac4-48df-b3c4-9f539e91bd11" SourceId="1" SourceUrl="http://localhost:2016/?wsdl=wsdl0" />
+    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="15ab3861-5436-4aa8-a624-53569ca61c22" SourceId="1" SourceUrl="http://localhost:2016/?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/CommodityTypeDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/CommodityTypeDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/CommodityTypeDataSet.xsd" id="CommodityTypeDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="CommodityTypeDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CommodityType">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CommodityTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommodityTypeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsCompact" type="xs:boolean" />
+              <xs:element minOccurs="0" name="FreightCoefficient" type="xs:double" />
+              <xs:element minOccurs="0" name="FreightType" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="OrderIndex" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ServiceCommodityType">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommodityTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:CommodityType" />
+      <xs:field xpath="mstns:CommodityTypeCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ServiceCommodityType_Constraint1">
+      <xs:selector xpath=".//mstns:ServiceCommodityType" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:CommodityTypeCode" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_ServiceCommodityType_CommodityType" msdata:parent="CommodityType" msdata:child="ServiceCommodityType" msdata:parentkey="CommodityTypeCode" msdata:childkey="CommodityTypeCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

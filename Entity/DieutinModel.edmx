@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DieuTinDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CollectItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProvinceCode" Type="varchar" MaxLength="10" />
+          <Property Name="POSCode" Type="varchar" MaxLength="10" />
+          <Property Name="PostmanCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostmanCodeName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Datacode" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ItemCode" Type="nvarchar" MaxLength="15" />
+          <Property Name="CustomerCode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SenderAddress" Type="nvarchar" MaxLength="500" />
+          <Property Name="SenderTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="255" />
+          <Property Name="SenderDesc" Type="nvarchar(max)" />
+          <Property Name="ReceiverAddress" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReceiverTel" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReceiverName" Type="nvarchar" MaxLength="255" />
+          <Property Name="COD" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="CODofSender" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Longitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="Latitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReceiveDate" Type="datetime" />
+          <Property Name="CollectDate" Type="datetime" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Year" Type="varchar" MaxLength="8" />
+          <Property Name="DieutinId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ExploitUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PostParent" Type="varchar" MaxLength="30" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="500" />
+          <Property Name="ShortName" Type="varchar" MaxLength="20" />
+          <Property Name="IDcode" Type="varchar" MaxLength="20" />
+          <Property Name="IDdate" Type="datetime" />
+          <Property Name="IDplace" Type="varchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Tel" Type="varchar" MaxLength="24" />
+          <Property Name="Fax" Type="varchar" MaxLength="24" />
+          <Property Name="IsActived" Type="bit" />
+          <Property Name="CreatedBy" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="PosmanCode" Type="varchar" MaxLength="50" />
+          <Property Name="IsDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeUser" Type="int" />
+          <Property Name="ParentId" Type="bigint" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="PostId" Type="varchar" MaxLength="30" />
+          <Property Name="LinkId" Type="int" />
+          <Property Name="PostParent" Type="varchar" MaxLength="30" />
+          <Property Name="PostRoot" Type="varchar" MaxLength="30" />
+          <Property Name="PayPost" Type="nvarchar" MaxLength="150" />
+          <Property Name="CustomerCode" Type="nvarchar" MaxLength="17" />
+          <Property Name="CRMCode" Type="varchar" MaxLength="100" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="550" />
+          <Property Name="UserName" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Tel" Type="varchar" MaxLength="24" />
+          <Property Name="Fax" Type="varchar" MaxLength="24" />
+          <Property Name="TaxCode" Type="varchar" MaxLength="24" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="ImageSrc" Type="nvarchar" MaxLength="200" />
+          <Property Name="ForgotCode" Type="uniqueidentifier" />
+          <Property Name="ForgotExpired" Type="datetime" />
+          <Property Name="Ticket" Type="uniqueidentifier" />
+          <Property Name="IsActived" Type="bit" />
+          <Property Name="CreatedBy" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="bigint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <Function Name="SMP_GetCollectItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PostmanCode" Type="varchar" Mode="In" />
+          <Parameter Name="PosCode" Type="varchar" Mode="In" />
+          <Parameter Name="Days" Type="smallint" Mode="In" />
+        </Function>
+        <Function Name="SyncPost_GetProvince" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PostId" Type="varchar" Mode="In" />
+          <Parameter Name="Keyword" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="DieuTinDbModelStoreContainer">
+          <EntitySet Name="CollectItem" EntityType="Self.CollectItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExploitUsers" EntityType="Self.ExploitUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DieuTinDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DieuTinDbEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="SMP_GetCollectItem" ReturnType="Collection(DieuTinDbModel.SMP_GetCollectItem_Result)">
+            <Parameter Name="PostmanCode" Mode="In" Type="String" />
+            <Parameter Name="PosCode" Mode="In" Type="String" />
+            <Parameter Name="Days" Mode="In" Type="Int16" />
+          </FunctionImport>
+          <EntitySet Name="CollectItems" EntityType="DieuTinDbModel.CollectItem" />
+          <EntitySet Name="ExploitUsers" EntityType="DieuTinDbModel.ExploitUser" />
+          <EntitySet Name="Users" EntityType="DieuTinDbModel.User" />
+          <FunctionImport Name="SyncPost_GetProvince" ReturnType="Collection(DieuTinDbModel.SyncPost_GetProvince_Result)">
+            <Parameter Name="PostId" Mode="In" Type="String" />
+            <Parameter Name="Keyword" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SMP_GetCollectItem_Result">
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="String" Name="ProvinceCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="POSCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="PostmanCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PostmanCodeName" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Datacode" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ItemCode" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="SenderAddress" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="SenderTel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SenderName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="SenderDesc" Nullable="true" />
+          <Property Type="String" Name="ReceiverAddress" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="ReceiverTel" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ReceiverName" Nullable="true" MaxLength="255" />
+          <Property Type="Decimal" Name="COD" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="CODofSender" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="Longitude" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Latitude" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ReceiveDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="CollectDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Year" Nullable="true" MaxLength="8" />
+          <Property Type="Int64" Name="DieutinId" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="CollectItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProvinceCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="POSCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PostmanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PostmanCodeName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Datacode" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ItemCode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SenderAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SenderTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SenderName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SenderDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverTel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="COD" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CODofSender" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiveDate" Type="DateTime" Precision="3" />
+          <Property Name="CollectDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Year" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="DieutinId" Type="Int64" />
+        </EntityType>
+        <EntityType Name="ExploitUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PostParent" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ShortName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IDcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IDdate" Type="DateTime" Precision="3" />
+          <Property Name="IDplace" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tel" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="IsActived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PosmanCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeUser" Type="Int32" />
+          <Property Name="ParentId" Type="Int64" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="PostId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="LinkId" Type="Int32" />
+          <Property Name="PostParent" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PostRoot" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PayPost" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerCode" Type="String" MaxLength="17" FixedLength="false" Unicode="true" />
+          <Property Name="CRMCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tel" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="TaxCode" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ImageSrc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ForgotCode" Type="Guid" />
+          <Property Name="ForgotExpired" Type="DateTime" Precision="3" />
+          <Property Name="Ticket" Type="Guid" />
+          <Property Name="IsActived" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int64" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <ComplexType Name="SyncPost_GetProvince_Result">
+          <Property Type="String" Name="PostId" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="RegionId" Nullable="true" />
+          <Property Type="String" Name="ParentId" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="4000" />
+          <Property Type="Byte" Name="Priority" Nullable="true" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="UpdateStatus" Nullable="true" />
+          <Property Type="Int32" Name="Status" Nullable="true" />
+          <Property Type="String" Name="Longtitude" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Lattitude" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Address" Nullable="true" />
+          <Property Type="Boolean" Name="Synced" Nullable="true" />
+          <Property Type="Single" Name="Area" Nullable="true" />
+          <Property Type="Single" Name="BuildingArea" Nullable="true" />
+          <Property Type="Single" Name="FloorArea" Nullable="true" />
+          <Property Type="String" Name="SearchTerm" Nullable="true" MaxLength="200" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DieuTinDbModelStoreContainer" CdmEntityContainer="DieuTinDbEntities" >
+          <FunctionImportMapping FunctionImportName="SMP_GetCollectItem" FunctionName="DieuTinDbModel.Store.SMP_GetCollectItem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DieuTinDbModel.SMP_GetCollectItem_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProvinceCode" ColumnName="ProvinceCode" />
+                <ScalarProperty Name="POSCode" ColumnName="POSCode" />
+                <ScalarProperty Name="PostmanCode" ColumnName="PostmanCode" />
+                <ScalarProperty Name="PostmanCodeName" ColumnName="PostmanCodeName" />
+                <ScalarProperty Name="Datacode" ColumnName="Datacode" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="SenderAddress" ColumnName="SenderAddress" />
+                <ScalarProperty Name="SenderTel" ColumnName="SenderTel" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="SenderDesc" ColumnName="SenderDesc" />
+                <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+                <ScalarProperty Name="ReceiverTel" ColumnName="ReceiverTel" />
+                <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+                <ScalarProperty Name="COD" ColumnName="COD" />
+                <ScalarProperty Name="CODofSender" ColumnName="CODofSender" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+                <ScalarProperty Name="CollectDate" ColumnName="CollectDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="DieutinId" ColumnName="DieutinId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="CollectItems">
+            <EntityTypeMapping TypeName="DieuTinDbModel.CollectItem">
+              <MappingFragment StoreEntitySet="CollectItem">
+                <ScalarProperty Name="DieutinId" ColumnName="DieutinId" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CollectDate" ColumnName="CollectDate" />
+                <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="CODofSender" ColumnName="CODofSender" />
+                <ScalarProperty Name="COD" ColumnName="COD" />
+                <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+                <ScalarProperty Name="ReceiverTel" ColumnName="ReceiverTel" />
+                <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+                <ScalarProperty Name="SenderDesc" ColumnName="SenderDesc" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="SenderTel" ColumnName="SenderTel" />
+                <ScalarProperty Name="SenderAddress" ColumnName="SenderAddress" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Datacode" ColumnName="Datacode" />
+                <ScalarProperty Name="PostmanCodeName" ColumnName="PostmanCodeName" />
+                <ScalarProperty Name="PostmanCode" ColumnName="PostmanCode" />
+                <ScalarProperty Name="POSCode" ColumnName="POSCode" />
+                <ScalarProperty Name="ProvinceCode" ColumnName="ProvinceCode" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExploitUsers">
+            <EntityTypeMapping TypeName="DieuTinDbModel.ExploitUser">
+              <MappingFragment StoreEntitySet="ExploitUsers">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="PosmanCode" ColumnName="PosmanCode" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActived" ColumnName="IsActived" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="IDplace" ColumnName="IDplace" />
+                <ScalarProperty Name="IDdate" ColumnName="IDdate" />
+                <ScalarProperty Name="IDcode" ColumnName="IDcode" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="PostParent" ColumnName="PostParent" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="DieuTinDbModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActived" ColumnName="IsActived" />
+                <ScalarProperty Name="Ticket" ColumnName="Ticket" />
+                <ScalarProperty Name="ForgotExpired" ColumnName="ForgotExpired" />
+                <ScalarProperty Name="ForgotCode" ColumnName="ForgotCode" />
+                <ScalarProperty Name="ImageSrc" ColumnName="ImageSrc" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="CRMCode" ColumnName="CRMCode" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="PayPost" ColumnName="PayPost" />
+                <ScalarProperty Name="PostRoot" ColumnName="PostRoot" />
+                <ScalarProperty Name="PostParent" ColumnName="PostParent" />
+                <ScalarProperty Name="LinkId" ColumnName="LinkId" />
+                <ScalarProperty Name="PostId" ColumnName="PostId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="TypeUser" ColumnName="TypeUser" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SyncPost_GetProvince" FunctionName="DieuTinDbModel.Store.SyncPost_GetProvince">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DieuTinDbModel.SyncPost_GetProvince_Result">
+                <ScalarProperty Name="PostId" ColumnName="PostId" />
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="UpdateStatus" ColumnName="UpdateStatus" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Longtitude" ColumnName="Longtitude" />
+                <ScalarProperty Name="Lattitude" ColumnName="Lattitude" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Synced" ColumnName="Synced" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="BuildingArea" ColumnName="BuildingArea" />
+                <ScalarProperty Name="FloorArea" ColumnName="FloorArea" />
+                <ScalarProperty Name="SearchTerm" ColumnName="SearchTerm" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

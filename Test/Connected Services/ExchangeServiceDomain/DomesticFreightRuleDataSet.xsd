@@ -1,0 +1,1913 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DomesticFreightRuleDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DomesticFreightRuleDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DomesticFreightRuleDataSet.xsd" id="DomesticFreightRuleDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DomesticFreightRuleDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CommuneFreightRegion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CommuneCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetailRegionFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FromFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ToFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetailProvinceFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FromProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ToProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetailValueAddedServiceProvinceFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FromProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ToProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticValueAddedServiceFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetailValueAddedServiceRegionFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FromFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ToFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticValueAddedServiceFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DistrictFreightRegion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DistrictCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticCollectionFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CollectionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreighRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FromMoney" type="xs:double" />
+              <xs:element minOccurs="0" name="ToMoney" type="xs:double" />
+              <xs:element minOccurs="0" name="CalculateMethod" type="xs:int" />
+              <xs:element minOccurs="0" name="CollectionFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="CollectionFreightPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="MoneyStep" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticCommodityType">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CommodityTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FreightCoefficient" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFarRegion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DistrictCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFarRegionCommune">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommuneCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFarRegionFreightStep">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Freight" type="xs:double" />
+              <xs:element name="FromWeight" type="xs:double" />
+              <xs:element name="ToWeight" type="xs:double" />
+              <xs:element name="FreightStep" type="xs:double" />
+              <xs:element name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element name="DomesticFarRegionFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFreightObject">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticFreightObjectCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightObjectName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Formula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFreightObjectFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DomesticFreightObjectFreightID" type="xs:int" />
+              <xs:element name="DomesticFreightObjectCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RowIndex" type="xs:int" />
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFreightProperty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticFreightPropertyCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DomesticFreightPropertyName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DomesticFreightObjectCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFreightPropertyValue">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DomesticFreightPropertyValueID" type="xs:int" />
+              <xs:element name="DomesticFreightPropertyCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Value">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DomesticFreightObjectFreightID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFreightRule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="RuleNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CollectionFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="CollectionFreightPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="HeavyItemFactor" type="xs:double" />
+              <xs:element minOccurs="0" name="FragileItemFactor" type="xs:double" />
+              <xs:element minOccurs="0" name="OtherFactor" type="xs:double" />
+              <xs:element minOccurs="0" name="MainFreightStoreProcedure">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ValueAddedServiceFreightStoreProcedure">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MainFreightFormula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ValueAddedServiceFreightFormula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="HasVAT" type="xs:boolean" />
+              <xs:element minOccurs="0" name="VATPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="ProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CustomerCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="17" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CommodityCalculationMethod" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="ExpiredDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FarRegionCoefficient" type="xs:double" />
+              <xs:element minOccurs="0" name="FarRegionFreightType" type="xs:int" />
+              <xs:element minOccurs="0" name="BatchCalculateMethod" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFreightRuleItemTypeUsing">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CalculateMethod" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFreightStep">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FromWeight" type="xs:double" />
+              <xs:element name="ToWeight" type="xs:double" />
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreightStep" type="xs:double" />
+              <xs:element name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="IsBatch" type="xs:boolean" />
+              <xs:element minOccurs="0" name="InternalProvinceFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="TransportType" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticServiceSurchange">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticServiceSurchangeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DomesticMainFreightPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="DomesticAirSurchangeFreightPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="Notes">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ValueAddedServiceFreightPercent" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticSurchangeValueAddedServicePercent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FuelSurchangePercent" type="xs:double" />
+              <xs:element name="ValueDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticValueAddedServiceFreightPercentMainFreight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticValueAddedServiceFreightPercentMainFreightCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PercentMainFreight" type="xs:double" />
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticValueAddedServiceFreightPerItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticValueAddedServiceFreightPerItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FreightPerItem" type="xs:double" />
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MinimumFreight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticValueAddedServiceFreightPerMoney">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticValueAddedServiceFreightPerMoneyCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PercentMoney" type="xs:double" />
+              <xs:element minOccurs="0" name="MinimumMoney" type="xs:double" />
+              <xs:element minOccurs="0" name="MaximumMoney" type="xs:double" />
+              <xs:element minOccurs="0" name="ReturnMoney" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticValueAddedServiceFreightPerStockDay">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticValueAddedServiceFreightPerStockDayCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FreightWeightPerStockDay" type="xs:double" />
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticValueAddedServiceFreightPerTotalItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticValueAddedServiceFreightPerTotalItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FromNumberOfItem" type="xs:double" />
+              <xs:element minOccurs="0" name="ToNumberOfItem" type="xs:double" />
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+              <xs:element minOccurs="0" name="MinimumFreight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticValueAddedServiceFreightPerTotalItemInBatch">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FromNumberOfItem" type="xs:double" />
+              <xs:element minOccurs="0" name="ToNumberOfItem" type="xs:double" />
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+              <xs:element minOccurs="0" name="MinimumFreight" type="xs:double" />
+              <xs:element name="DomesticValueAddedServiceFreightPerTotalItemInBatchCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticValueAddedServiceFreightStep">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticValueAddedServiceFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FromWeight" type="xs:double" />
+              <xs:element name="ToWeight" type="xs:double" />
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreightStep" type="xs:double" />
+              <xs:element name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="IsBatch" type="xs:boolean" />
+              <xs:element minOccurs="0" name="InternalProvinceFreight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticValueAddedServiceFreightTotalWeight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticValueAddedServiceFreightPerTotalWeightCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticValueAddedServiceFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FreightRegion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreightRegionName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsSpecial" type="xs:boolean" />
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PetrolFreightSurchargeRule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PetrolFreightSurchargeRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RuleNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="POSFreightRegion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProvinceFreightRegion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProvinceInterconnect">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FromProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ToProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DomesticMainFreightPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="DomesticAirSurchargeFreightPercent" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RegionInterconnect">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FromFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ToFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DomesticMainFreightPercent" type="xs:double" />
+              <xs:element minOccurs="0" name="DomesticAirSurchargeFreightPercent" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MoneyOrderValueAddedService">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MoneyOrderRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="PerItem" type="xs:double" />
+              <xs:element minOccurs="0" name="PercentMoney" type="xs:double" />
+              <xs:element minOccurs="0" name="MinimumMoney" type="xs:double" />
+              <xs:element minOccurs="0" name="MaximumMoney" type="xs:double" />
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MoneyOrderRule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MoneyOrderRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="RuleNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MoneyOrderStep">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MoneyOrderRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FromMoney" type="xs:double" />
+              <xs:element name="ToMoney" type="xs:double" />
+              <xs:element name="Freight" type="xs:double" />
+              <xs:element name="CalculationMethod" type="xs:unsignedByte" />
+              <xs:element name="MinimumFreight" type="xs:double" />
+              <xs:element name="MoneyOrderStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="isBatch" type="xs:boolean" />
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FreightStep" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FreightRegionDeliveryAddress">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FreightRegionName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomesticFreightStepDeliveryAddress">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DomesticFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FromWeight" type="xs:double" />
+              <xs:element minOccurs="0" name="ToWeight" type="xs:double" />
+              <xs:element minOccurs="0" name="FreightStep" type="xs:double" />
+              <xs:element minOccurs="0" name="CalculationMethod" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetailRegionFreightDeliveryAddress">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ToFreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightStepCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DistrictFreightRegionDeliveryAddress">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DistrictCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CommuneFreightRegionDeliveryAddress">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FreightRegionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DomesticFreightRuleCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommuneCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:CommuneFreightRegion" />
+      <xs:field xpath="mstns:CommuneCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:FreightRegionCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DetailRegionFreight_Constraint1">
+      <xs:selector xpath=".//mstns:DetailRegionFreight" />
+      <xs:field xpath="mstns:FromFreightRegionCode" />
+      <xs:field xpath="mstns:ToFreightRegionCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightStepCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DetailProvinceFreight_Constraint1">
+      <xs:selector xpath=".//mstns:DetailProvinceFreight" />
+      <xs:field xpath="mstns:FromProvinceCode" />
+      <xs:field xpath="mstns:ToProvinceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightStepCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DetailValueAddedServiceProvinceFreight_Constraint1">
+      <xs:selector xpath=".//mstns:DetailValueAddedServiceProvinceFreight" />
+      <xs:field xpath="mstns:FromProvinceCode" />
+      <xs:field xpath="mstns:ToProvinceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightStepCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DetailValueAddedServiceRegionFreight_Constraint1">
+      <xs:selector xpath=".//mstns:DetailValueAddedServiceRegionFreight" />
+      <xs:field xpath="mstns:FromFreightRegionCode" />
+      <xs:field xpath="mstns:ToFreightRegionCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightStepCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DistrictFreightRegion_Constraint1">
+      <xs:selector xpath=".//mstns:DistrictFreightRegion" />
+      <xs:field xpath="mstns:FreightRegionCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DistrictCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticCollectionFreight_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticCollectionFreight" />
+      <xs:field xpath="mstns:CollectionCode" />
+      <xs:field xpath="mstns:DomesticFreighRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticCommodityType_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticCommodityType" />
+      <xs:field xpath="mstns:CommodityTypeCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFarRegion_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFarRegion" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DistrictCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFarRegionCommune_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFarRegionCommune" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:CommuneCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFarRegionFreightStep_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFarRegionFreightStep" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFarRegionFreightStepCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFreightObject_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFreightObject" />
+      <xs:field xpath="mstns:DomesticFreightObjectCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFreightObjectFreight_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFreightObjectFreight" />
+      <xs:field xpath="mstns:DomesticFreightObjectFreightID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFreightProperty_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFreightProperty" />
+      <xs:field xpath="mstns:DomesticFreightPropertyCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFreightPropertyValue_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFreightPropertyValue" />
+      <xs:field xpath="mstns:DomesticFreightPropertyValueID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFreightRule_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFreightRule" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFreightRuleItemTypeUsing_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFreightRuleItemTypeUsing" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ItemTypeCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFreightStep_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFreightStep" />
+      <xs:field xpath="mstns:DomesticFreightStepCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticServiceSurchange_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticServiceSurchange" />
+      <xs:field xpath="mstns:DomesticServiceSurchangeCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueDate" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticSurchangeValueAddedServicePercent_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticSurchangeValueAddedServicePercent" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:ValueDate" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticValueAddedServiceFreightPercentMainFreight_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticValueAddedServiceFreightPercentMainFreight" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightPercentMainFreightCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticValueAddedServiceFreightPerItem_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticValueAddedServiceFreightPerItem" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightPerItemCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticValueAddedServiceFreightPerMoney_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticValueAddedServiceFreightPerMoney" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightPerMoneyCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticValueAddedServiceFreightPerStockDay_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticValueAddedServiceFreightPerStockDay" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightPerStockDayCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticValueAddedServiceFreightPerTotalItem_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticValueAddedServiceFreightPerTotalItem" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightPerTotalItemCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticValueAddedServiceFreightPerTotalItemInBatch_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticValueAddedServiceFreightPerTotalItemInBatch" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightPerTotalItemInBatchCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticValueAddedServiceFreightStep_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticValueAddedServiceFreightStep" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightStepCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticValueAddedServiceFreightTotalWeight_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticValueAddedServiceFreightTotalWeight" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightPerTotalWeightCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:DomesticValueAddedServiceFreightStepCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FreightRegion_Constraint1">
+      <xs:selector xpath=".//mstns:FreightRegion" />
+      <xs:field xpath="mstns:FreightRegionCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="PetrolFreightSurchargeRule_Constraint1">
+      <xs:selector xpath=".//mstns:PetrolFreightSurchargeRule" />
+      <xs:field xpath="mstns:PetrolFreightSurchargeRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="POSFreightRegion_Constraint1">
+      <xs:selector xpath=".//mstns:POSFreightRegion" />
+      <xs:field xpath="mstns:FreightRegionCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:POSCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ProvinceFreightRegion_Constraint1">
+      <xs:selector xpath=".//mstns:ProvinceFreightRegion" />
+      <xs:field xpath="mstns:FreightRegionCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ProvinceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ProvinceInterconnect_Constraint1">
+      <xs:selector xpath=".//mstns:ProvinceInterconnect" />
+      <xs:field xpath="mstns:FromProvinceCode" />
+      <xs:field xpath="mstns:ToProvinceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="RegionInterconnect_Constraint1">
+      <xs:selector xpath=".//mstns:RegionInterconnect" />
+      <xs:field xpath="mstns:FromFreightRegionCode" />
+      <xs:field xpath="mstns:ToFreightRegionCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="MoneyOrderValueAddedService_Constraint1">
+      <xs:selector xpath=".//mstns:MoneyOrderValueAddedService" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:MoneyOrderRuleCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ItemTypeCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="MoneyOrderRule_Constraint1">
+      <xs:selector xpath=".//mstns:MoneyOrderRule" />
+      <xs:field xpath="mstns:MoneyOrderRuleCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ItemTypeCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="MoneyOrderStep_Constraint1">
+      <xs:selector xpath=".//mstns:MoneyOrderStep" />
+      <xs:field xpath="mstns:MoneyOrderRuleCode" />
+      <xs:field xpath="mstns:MoneyOrderStepCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ItemTypeCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FreightRegionDeliveryAddress_Constraint1">
+      <xs:selector xpath=".//mstns:FreightRegionDeliveryAddress" />
+      <xs:field xpath="mstns:FreightRegionCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DomesticFreightStepDeliveryAddress_Constraint1">
+      <xs:selector xpath=".//mstns:DomesticFreightStepDeliveryAddress" />
+      <xs:field xpath="mstns:DomesticFreightStepCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DetailRegionFreightDeliveryAddress_Constraint1">
+      <xs:selector xpath=".//mstns:DetailRegionFreightDeliveryAddress" />
+      <xs:field xpath="mstns:ToFreightRegionCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightStepCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DistrictFreightRegionDeliveryAddress_Constraint1">
+      <xs:selector xpath=".//mstns:DistrictFreightRegionDeliveryAddress" />
+      <xs:field xpath="mstns:FreightRegionCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:DistrictCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CommuneFreightRegionDeliveryAddress_Constraint1">
+      <xs:selector xpath=".//mstns:CommuneFreightRegionDeliveryAddress" />
+      <xs:field xpath="mstns:FreightRegionCode" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:DomesticFreightRuleCode" />
+      <xs:field xpath="mstns:CommuneCode" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_DetailRegionFreight_DomesticFreightStep1" msdata:parent="DomesticFreightStep" msdata:child="DetailRegionFreight" msdata:parentkey="DomesticFreightStepCode ServiceCode DomesticFreightRuleCode" msdata:childkey="DomesticFreightStepCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DetailRegionFreight_RegionInterconnect" msdata:parent="RegionInterconnect" msdata:child="DetailRegionFreight" msdata:parentkey="FromFreightRegionCode ToFreightRegionCode DomesticFreightRuleCode ServiceCode" msdata:childkey="FromFreightRegionCode ToFreightRegionCode DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DetailProvinceFreight_DomesticFreightStep1" msdata:parent="DomesticFreightStep" msdata:child="DetailProvinceFreight" msdata:parentkey="DomesticFreightStepCode ServiceCode DomesticFreightRuleCode" msdata:childkey="DomesticFreightStepCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DetailProvinceFreight_ProvinceInterconnect" msdata:parent="ProvinceInterconnect" msdata:child="DetailProvinceFreight" msdata:parentkey="FromProvinceCode ToProvinceCode DomesticFreightRuleCode ServiceCode" msdata:childkey="FromProvinceCode ToProvinceCode DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DetailValueAddedServiceProvinceFreight_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DetailValueAddedServiceProvinceFreight" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DetailValueAddedServiceProvinceFreight_DomesticValueAddedServiceFreightStep" msdata:parent="DomesticValueAddedServiceFreightStep" msdata:child="DetailValueAddedServiceProvinceFreight" msdata:parentkey="DomesticValueAddedServiceFreightStepCode ServiceCode DomesticFreightRuleCode" msdata:childkey="DomesticValueAddedServiceFreightStepCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DetailValueAddedServiceRegionFreight_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DetailValueAddedServiceRegionFreight" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DetailValueAddedServiceRegionFreight_DomesticValueAddedServiceFreightStep" msdata:parent="DomesticValueAddedServiceFreightStep" msdata:child="DetailValueAddedServiceRegionFreight" msdata:parentkey="DomesticValueAddedServiceFreightStepCode ServiceCode DomesticFreightRuleCode" msdata:childkey="DomesticValueAddedServiceFreightStepCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DistrictFreightRegion_FreightRegion" msdata:parent="FreightRegion" msdata:child="DistrictFreightRegion" msdata:parentkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" msdata:childkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticCollectionFreight_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticCollectionFreight" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreighRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticCommodityType_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticCommodityType" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticFarRegion_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticFarRegion" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticFarRegionCommune_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticFarRegionCommune" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticFarRegionFreightStep_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticFarRegionFreightStep" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticFreightObject_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticFreightObject" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticFreightObjectFreight_DomesticFreightObject" msdata:parent="DomesticFreightObject" msdata:child="DomesticFreightObjectFreight" msdata:parentkey="DomesticFreightObjectCode" msdata:childkey="DomesticFreightObjectCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticFreightProperty_DomesticFreightObject" msdata:parent="DomesticFreightObject" msdata:child="DomesticFreightProperty" msdata:parentkey="DomesticFreightObjectCode" msdata:childkey="DomesticFreightObjectCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticFreightPropertyValue_DomesticFreightObjectFreight" msdata:parent="DomesticFreightObjectFreight" msdata:child="DomesticFreightPropertyValue" msdata:parentkey="DomesticFreightObjectFreightID" msdata:childkey="DomesticFreightObjectFreightID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticFreightPropertyValue_DomesticFreightProperty" msdata:parent="DomesticFreightProperty" msdata:child="DomesticFreightPropertyValue" msdata:parentkey="DomesticFreightPropertyCode" msdata:childkey="DomesticFreightPropertyCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticFreightRuleItemTypeUsing_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticFreightRuleItemTypeUsing" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticSurchangeValueAddedServicePercent_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticSurchangeValueAddedServicePercent" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticValueAddedServiceFreightPercentMainFreight_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticValueAddedServiceFreightPercentMainFreight" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticValueAddedServiceFreightPerItem_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticValueAddedServiceFreightPerItem" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticValueAddedServiceFreightPerMoney_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticValueAddedServiceFreightPerMoney" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticValueAddedServiceFreightPerStockDay_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticValueAddedServiceFreightPerStockDay" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticValueAddedServiceFreightPerTotalItem_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticValueAddedServiceFreightPerTotalItem" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticValueAddedServiceFreightPerTotalItemInBatch_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticValueAddedServiceFreightPerTotalItemInBatch" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticValueAddedServiceFreightTotalWeight_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="DomesticValueAddedServiceFreightTotalWeight" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DomesticValueAddedServiceFreightTotalWeight_DomesticValueAddedFreightStep" msdata:parent="DomesticValueAddedServiceFreightStep" msdata:child="DomesticValueAddedServiceFreightTotalWeight" msdata:parentkey="DomesticValueAddedServiceFreightStepCode ServiceCode DomesticFreightRuleCode" msdata:childkey="DomesticValueAddedServiceFreightStepCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_FreightRegion_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="FreightRegion" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_POSFreightRegion_FreightRegion" msdata:parent="FreightRegion" msdata:child="POSFreightRegion" msdata:parentkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" msdata:childkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_ProvinceFreightRegion_FreightRegion" msdata:parent="FreightRegion" msdata:child="ProvinceFreightRegion" msdata:parentkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" msdata:childkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_ProvinceInterconnect_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="ProvinceInterconnect" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_RegionInterconnect_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="RegionInterconnect" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_MoneyOrderValueAddedService_MoneyOrderRule" msdata:parent="MoneyOrderRule" msdata:child="MoneyOrderValueAddedService" msdata:parentkey="MoneyOrderRuleCode DomesticFreightRuleCode ItemTypeCode ServiceCode" msdata:childkey="MoneyOrderRuleCode DomesticFreightRuleCode ItemTypeCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_MoneyOrderStep_MoneyOrderRule" msdata:parent="MoneyOrderRule" msdata:child="MoneyOrderStep" msdata:parentkey="MoneyOrderRuleCode DomesticFreightRuleCode ItemTypeCode ServiceCode" msdata:childkey="MoneyOrderRuleCode DomesticFreightRuleCode ItemTypeCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_CommuneFreightRegion_FreightRegion" msdata:parent="FreightRegion" msdata:child="CommuneFreightRegion" msdata:parentkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" msdata:childkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_FreightRegionDeliveryAddress_DomesticFreightRule" msdata:parent="DomesticFreightRule" msdata:child="FreightRegionDeliveryAddress" msdata:parentkey="DomesticFreightRuleCode ServiceCode" msdata:childkey="DomesticFreightRuleCode ServiceCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DetailRegionFreightDeliveryAddress_DomesticFreightStepDeliveryAddress" msdata:parent="DomesticFreightStepDeliveryAddress" msdata:child="DetailRegionFreightDeliveryAddress" msdata:parentkey="DomesticFreightStepCode ServiceCode DomesticFreightRuleCode" msdata:childkey="DomesticFreightStepCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_DistrictFreightRegionDeliveryAddress_FreightRegionDeliveryAddress" msdata:parent="FreightRegionDeliveryAddress" msdata:child="DistrictFreightRegionDeliveryAddress" msdata:parentkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" msdata:childkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+      <msdata:Relationship name="FK_CommuneFreightRegionDeliveryAddress_FreightRegionDeliveryAddress" msdata:parent="FreightRegionDeliveryAddress" msdata:child="CommuneFreightRegionDeliveryAddress" msdata:parentkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" msdata:childkey="FreightRegionCode ServiceCode DomesticFreightRuleCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      </msdata:Relationship>
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

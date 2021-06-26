@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/CODDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/CODDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/CODDataSet.xsd" id="CODDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="CODDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PAYMENT_RESULT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ERROR_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ERROR_MSG" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="COLLECT_INFO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SERVICE_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="PARCEL_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ORDER_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="COLLECT_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="SERVICE_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="COLLECT_AMOUNT" type="xs:string" />
+              <xs:element minOccurs="0" name="TRANS_FEE" type="xs:string" />
+              <xs:element minOccurs="0" name="TRANS_AMOUNT" type="xs:string" />
+              <xs:element minOccurs="0" name="SENDER_CUSTOMER_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="SENDER_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="SENDER_ADDRESS" type="xs:string" />
+              <xs:element minOccurs="0" name="SENDER_PHONE" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_CUSTOMER_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_ADDRESS" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_PHONE" type="xs:string" />
+              <xs:element minOccurs="0" name="PO_CODE_ISSUE" type="xs:string" />
+              <xs:element minOccurs="0" name="BRANCH_CODE_DELIVERY" type="xs:string" />
+              <xs:element minOccurs="0" name="ISSUE_DATE" type="xs:string" />
+              <xs:element minOccurs="0" name="CONTENTS" type="xs:string" />
+              <xs:element minOccurs="0" name="STATUS" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PAY_INFO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PARCEL_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ISSUE_DATE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAY_ID" type="xs:string" />
+              <xs:element minOccurs="0" name="TRANS_AMOUNT" type="xs:string" />
+              <xs:element minOccurs="0" name="CUSTOMER_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_ADDRESS" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_PHONE" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_ID_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_ID_NUMBER" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_ID_DATE" type="xs:string" />
+              <xs:element minOccurs="0" name="RECEIVER_ID_WHERE" type="xs:string" />
+              <xs:element minOccurs="0" name="SENDER_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="SENDER_ADDRESS" type="xs:string" />
+              <xs:element minOccurs="0" name="SENDER_PHONE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

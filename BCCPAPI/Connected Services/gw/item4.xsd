@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ctin.Oe.DAO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ctin.Oe.DAO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bccp-gw.vnpost.vn:1022/?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Messages">
+    <xs:sequence>
+      <xs:element name="lsCustomerInfor" nillable="true" type="tns:ArrayOfCustomerInforEntity" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="lsEvent" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element name="lsItem" nillable="true" type="tns:ArrayOfItemsEntity" />
+      <xs:element name="lsMail" nillable="true" type="tns:ArrayOfMailsEntity" />
+      <xs:element name="lsMailItem" nillable="true" type="tns:ArrayOfMailItemEntity" />
+      <xs:element name="lsReceptacle" nillable="true" type="tns:ArrayOfReceptaclesEntity" />
+      <xs:element name="lsTransport" nillable="true" type="tns:ArrayOfTransportsEntity" />
+      <xs:element name="strMailID" nillable="true" type="xs:string" />
+      <xs:element name="strNewItem" nillable="true" type="xs:string" />
+      <xs:element name="strNewMailID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Messages" nillable="true" type="tns:Messages" />
+  <xs:complexType name="ArrayOfCustomerInforEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerInforEntity" nillable="true" type="tns:CustomerInforEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerInforEntity" nillable="true" type="tns:ArrayOfCustomerInforEntity" />
+  <xs:complexType name="CustomerInforEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CustomerInforEntityBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerInforEntity" nillable="true" type="tns:CustomerInforEntity" />
+  <xs:complexType name="CustomerInforEntityBase">
+    <xs:sequence>
+      <xs:element name="_ADDRESS" nillable="true" type="xs:string" />
+      <xs:element name="_ADDRESS1" nillable="true" type="xs:string" />
+      <xs:element name="_DATE_OF_ISSUE" type="xs:dateTime" />
+      <xs:element name="_ID" type="xs:int" />
+      <xs:element name="_IDENTIFY_NUMBER" nillable="true" type="xs:string" />
+      <xs:element name="_InternalChangedIsNullADDRESS" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullADDRESS1" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullDATE_OF_ISSUE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullIDENTIFY_NUMBER" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullNAME" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullORG_OF_ISSUE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullPROVINCE" type="xs:boolean" />
+      <xs:element name="_IsNullADDRESS" type="xs:boolean" />
+      <xs:element name="_IsNullADDRESS1" type="xs:boolean" />
+      <xs:element name="_IsNullDATE_OF_ISSUE" type="xs:boolean" />
+      <xs:element name="_IsNullID" type="xs:boolean" />
+      <xs:element name="_IsNullIDENTIFY_NUMBER" type="xs:boolean" />
+      <xs:element name="_IsNullNAME" type="xs:boolean" />
+      <xs:element name="_IsNullORG_OF_ISSUE" type="xs:boolean" />
+      <xs:element name="_IsNullPROVINCE" type="xs:boolean" />
+      <xs:element name="_NAME" nillable="true" type="xs:string" />
+      <xs:element name="_ORG_OF_ISSUE" nillable="true" type="xs:string" />
+      <xs:element name="_PROVINCE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerInforEntityBase" nillable="true" type="tns:CustomerInforEntityBase" />
+  <xs:complexType name="ArrayOfItemsEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemsEntity" nillable="true" type="tns:ItemsEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemsEntity" nillable="true" type="tns:ArrayOfItemsEntity" />
+  <xs:complexType name="ItemsEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemsEntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RECEIVER_ADDRESS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RECEIVER_ADDRESS1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RECEIVER_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SENDER_ADDRESS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SENDER_ADDRESS1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SENDER_NAME" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ItemsEntity" nillable="true" type="tns:ItemsEntity" />
+  <xs:complexType name="ItemsEntityBase">
+    <xs:sequence>
+      <xs:element name="_ANIMAL_EXPENSE" type="xs:int" />
+      <xs:element name="_CREATE_LETTER" type="xs:boolean" />
+      <xs:element name="_CULTURE_EXPENSE" type="xs:int" />
+      <xs:element name="_CUSTOM_EXPENSE" type="xs:int" />
+      <xs:element name="_DESTINATION_POST" nillable="true" type="xs:string" />
+      <xs:element name="_HEAL_EXPENSE" type="xs:int" />
+      <xs:element name="_ID" type="xs:int" />
+      <xs:element name="_ITEM_NUMBER" nillable="true" type="xs:string" />
+      <xs:element name="_ITEM_STATUS_ID" type="xs:int" />
+      <xs:element name="_InternalChangedIsNullANIMAL_EXPENSE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullCREATE_LETTER" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullCULTURE_EXPENSE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullCUSTOM_EXPENSE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullDESTINATION_POST" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullHEAL_EXPENSE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullITEM_NUMBER" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullITEM_STATUS_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullMAIL_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullMAIL_SERVICES_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullOBSERVATIONS" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullORIGIN_POST" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullPLANT_EXPENSE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullREAL_WEIGHT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullREAL_WEIGHT1" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullREAL_WEIGHT2" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullRECEPTACLE_NUMBER" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullRETURN" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullRETURN1" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullRETURN_IN" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullRETURN_REASON_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullSEAL_EXPENSESE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullSTORE_TYPE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTAX" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTAX_OBSERVATION" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTRANSIT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullWEIGHT" type="xs:boolean" />
+      <xs:element name="_IsNullANIMAL_EXPENSE" type="xs:boolean" />
+      <xs:element name="_IsNullCREATE_LETTER" type="xs:boolean" />
+      <xs:element name="_IsNullCULTURE_EXPENSE" type="xs:boolean" />
+      <xs:element name="_IsNullCUSTOM_EXPENSE" type="xs:boolean" />
+      <xs:element name="_IsNullDESTINATION_POST" type="xs:boolean" />
+      <xs:element name="_IsNullHEAL_EXPENSE" type="xs:boolean" />
+      <xs:element name="_IsNullID" type="xs:boolean" />
+      <xs:element name="_IsNullITEM_NUMBER" type="xs:boolean" />
+      <xs:element name="_IsNullITEM_STATUS_ID" type="xs:boolean" />
+      <xs:element name="_IsNullMAIL_ID" type="xs:boolean" />
+      <xs:element name="_IsNullMAIL_SERVICES_ID" type="xs:boolean" />
+      <xs:element name="_IsNullOBSERVATIONS" type="xs:boolean" />
+      <xs:element name="_IsNullORIGIN_POST" type="xs:boolean" />
+      <xs:element name="_IsNullPLANT_EXPENSE" type="xs:boolean" />
+      <xs:element name="_IsNullREAL_WEIGHT" type="xs:boolean" />
+      <xs:element name="_IsNullREAL_WEIGHT1" type="xs:boolean" />
+      <xs:element name="_IsNullREAL_WEIGHT2" type="xs:boolean" />
+      <xs:element name="_IsNullRECEPTACLE_NUMBER" type="xs:boolean" />
+      <xs:element name="_IsNullRETURN" type="xs:boolean" />
+      <xs:element name="_IsNullRETURN1" type="xs:boolean" />
+      <xs:element name="_IsNullRETURN_IN" type="xs:boolean" />
+      <xs:element name="_IsNullRETURN_REASON_ID" type="xs:boolean" />
+      <xs:element name="_IsNullSEAL_EXPENSESE" type="xs:boolean" />
+      <xs:element name="_IsNullSTORE_TYPE" type="xs:boolean" />
+      <xs:element name="_IsNullTAX" type="xs:boolean" />
+      <xs:element name="_IsNullTAX_OBSERVATION" type="xs:boolean" />
+      <xs:element name="_IsNullTRANSIT" type="xs:boolean" />
+      <xs:element name="_IsNullWEIGHT" type="xs:boolean" />
+      <xs:element name="_MAIL_ID" type="xs:int" />
+      <xs:element name="_MAIL_SERVICES_ID" type="xs:int" />
+      <xs:element name="_OBSERVATIONS" nillable="true" type="xs:string" />
+      <xs:element name="_ORIGIN_POST" nillable="true" type="xs:string" />
+      <xs:element name="_PLANT_EXPENSE" type="xs:int" />
+      <xs:element name="_REAL_WEIGHT" type="xs:int" />
+      <xs:element name="_REAL_WEIGHT1" type="xs:int" />
+      <xs:element name="_REAL_WEIGHT2" type="xs:int" />
+      <xs:element name="_RECEPTACLE_NUMBER" nillable="true" type="xs:string" />
+      <xs:element name="_RETURN" type="xs:decimal" />
+      <xs:element name="_RETURN1" type="xs:decimal" />
+      <xs:element name="_RETURN_IN" type="xs:boolean" />
+      <xs:element name="_RETURN_REASON_ID" type="xs:int" />
+      <xs:element name="_SEAL_EXPENSESE" type="xs:int" />
+      <xs:element name="_STORE_TYPE" nillable="true" type="xs:string" />
+      <xs:element name="_TAX" type="xs:boolean" />
+      <xs:element name="_TAX_OBSERVATION" nillable="true" type="xs:string" />
+      <xs:element name="_TRANSIT" type="xs:decimal" />
+      <xs:element name="_WEIGHT" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemsEntityBase" nillable="true" type="tns:ItemsEntityBase" />
+  <xs:complexType name="ArrayOfMailsEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailsEntity" nillable="true" type="tns:MailsEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailsEntity" nillable="true" type="tns:ArrayOfMailsEntity" />
+  <xs:complexType name="MailsEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MailsEntityBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailsEntity" nillable="true" type="tns:MailsEntity" />
+  <xs:complexType name="MailsEntityBase">
+    <xs:sequence>
+      <xs:element name="_AO_COUNT" type="xs:int" />
+      <xs:element name="_BARCODE" nillable="true" type="xs:string" />
+      <xs:element name="_CN65_BILL" type="xs:int" />
+      <xs:element name="_COL_6" type="xs:decimal" />
+      <xs:element name="_COL_7" type="xs:decimal" />
+      <xs:element name="_COL_8" type="xs:decimal" />
+      <xs:element name="_COL_9" type="xs:decimal" />
+      <xs:element name="_DATE_DEPARTURE" type="xs:dateTime" />
+      <xs:element name="_DESTINATION_IMPC" nillable="true" type="xs:string" />
+      <xs:element name="_DateCreate" type="xs:dateTime" />
+      <xs:element name="_DateEnd" type="xs:dateTime" />
+      <xs:element name="_EndWorkingID" type="xs:int" />
+      <xs:element name="_GroupID" type="xs:int" />
+      <xs:element name="_ID" type="xs:int" />
+      <xs:element name="_InternalChangedIsNullAO_COUNT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullBARCODE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullCN65_BILL" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullCOL_6" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullCOL_7" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullCOL_8" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullCOL_9" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullDATE_DEPARTURE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullDESTINATION_IMPC" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullDateCreate" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullDateEnd" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullEndWorkingID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullGroupID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullIsTransit" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullLC_AO_WEIGHT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullLC_COUNT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullLOCAL" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullMAIL_CLASS_CODE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullMAIL_CODE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullMAIL_IN" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullMAIL_NUMBER" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullMAIL_STATUS_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullMAIL_SUB_CLASS_CODE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullM_LESS_5_NUMBER" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullM_LESS_5_WEIGHT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullM_MORE_5_NUMBER" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullM_MORE_5_WEIGHT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullOE_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullORIGIN_IMPC" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullPRIORITY" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullR_ITEMS_COUNT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullR_RECEPTACLE_COUNT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTOTAL_ITEMS_COUNT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTOTAL_RECEPTACLE_COUNT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTOTAL_WEIGHT" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTOTAL_WEIGHT_NORMAL" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTRANSPORT_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTransportTypeId" type="xs:boolean" />
+      <xs:element name="_IsNullAO_COUNT" type="xs:boolean" />
+      <xs:element name="_IsNullBARCODE" type="xs:boolean" />
+      <xs:element name="_IsNullCN65_BILL" type="xs:boolean" />
+      <xs:element name="_IsNullCOL_6" type="xs:boolean" />
+      <xs:element name="_IsNullCOL_7" type="xs:boolean" />
+      <xs:element name="_IsNullCOL_8" type="xs:boolean" />
+      <xs:element name="_IsNullCOL_9" type="xs:boolean" />
+      <xs:element name="_IsNullDATE_DEPARTURE" type="xs:boolean" />
+      <xs:element name="_IsNullDESTINATION_IMPC" type="xs:boolean" />
+      <xs:element name="_IsNullDateCreate" type="xs:boolean" />
+      <xs:element name="_IsNullDateEnd" type="xs:boolean" />
+      <xs:element name="_IsNullEndWorkingID" type="xs:boolean" />
+      <xs:element name="_IsNullGroupID" type="xs:boolean" />
+      <xs:element name="_IsNullID" type="xs:boolean" />
+      <xs:element name="_IsNullIsTransit" type="xs:boolean" />
+      <xs:element name="_IsNullLC_AO_WEIGHT" type="xs:boolean" />
+      <xs:element name="_IsNullLC_COUNT" type="xs:boolean" />
+      <xs:element name="_IsNullLOCAL" type="xs:boolean" />
+      <xs:element name="_IsNullMAIL_CLASS_CODE" type="xs:boolean" />
+      <xs:element name="_IsNullMAIL_CODE" type="xs:boolean" />
+      <xs:element name="_IsNullMAIL_IN" type="xs:boolean" />
+      <xs:element name="_IsNullMAIL_NUMBER" type="xs:boolean" />
+      <xs:element name="_IsNullMAIL_STATUS_ID" type="xs:boolean" />
+      <xs:element name="_IsNullMAIL_SUB_CLASS_CODE" type="xs:boolean" />
+      <xs:element name="_IsNullM_LESS_5_NUMBER" type="xs:boolean" />
+      <xs:element name="_IsNullM_LESS_5_WEIGHT" type="xs:boolean" />
+      <xs:element name="_IsNullM_MORE_5_NUMBER" type="xs:boolean" />
+      <xs:element name="_IsNullM_MORE_5_WEIGHT" type="xs:boolean" />
+      <xs:element name="_IsNullOE_ID" type="xs:boolean" />
+      <xs:element name="_IsNullORIGIN_IMPC" type="xs:boolean" />
+      <xs:element name="_IsNullPRIORITY" type="xs:boolean" />
+      <xs:element name="_IsNullR_ITEMS_COUNT" type="xs:boolean" />
+      <xs:element name="_IsNullR_RECEPTACLE_COUNT" type="xs:boolean" />
+      <xs:element name="_IsNullTOTAL_ITEMS_COUNT" type="xs:boolean" />
+      <xs:element name="_IsNullTOTAL_RECEPTACLE_COUNT" type="xs:boolean" />
+      <xs:element name="_IsNullTOTAL_WEIGHT" type="xs:boolean" />
+      <xs:element name="_IsNullTOTAL_WEIGHT_NORMAL" type="xs:boolean" />
+      <xs:element name="_IsNullTRANSPORT_ID" type="xs:boolean" />
+      <xs:element name="_IsNullTransportTypeId" type="xs:boolean" />
+      <xs:element name="_IsTransit" type="xs:boolean" />
+      <xs:element name="_LC_AO_WEIGHT" type="xs:int" />
+      <xs:element name="_LC_COUNT" type="xs:int" />
+      <xs:element name="_LOCAL" type="xs:boolean" />
+      <xs:element name="_MAIL_CLASS_CODE" nillable="true" type="xs:string" />
+      <xs:element name="_MAIL_CODE" nillable="true" type="xs:string" />
+      <xs:element name="_MAIL_IN" type="xs:boolean" />
+      <xs:element name="_MAIL_NUMBER" nillable="true" type="xs:string" />
+      <xs:element name="_MAIL_STATUS_ID" type="xs:int" />
+      <xs:element name="_MAIL_SUB_CLASS_CODE" nillable="true" type="xs:string" />
+      <xs:element name="_M_LESS_5_NUMBER" type="xs:int" />
+      <xs:element name="_M_LESS_5_WEIGHT" type="xs:int" />
+      <xs:element name="_M_MORE_5_NUMBER" type="xs:int" />
+      <xs:element name="_M_MORE_5_WEIGHT" type="xs:int" />
+      <xs:element name="_OE_ID" type="xs:int" />
+      <xs:element name="_ORIGIN_IMPC" nillable="true" type="xs:string" />
+      <xs:element name="_PRIORITY" type="xs:boolean" />
+      <xs:element name="_R_ITEMS_COUNT" type="xs:int" />
+      <xs:element name="_R_RECEPTACLE_COUNT" type="xs:int" />
+      <xs:element name="_TOTAL_ITEMS_COUNT" type="xs:int" />
+      <xs:element name="_TOTAL_RECEPTACLE_COUNT" type="xs:int" />
+      <xs:element name="_TOTAL_WEIGHT" type="xs:int" />
+      <xs:element name="_TOTAL_WEIGHT_NORMAL" type="xs:int" />
+      <xs:element name="_TRANSPORT_ID" type="xs:int" />
+      <xs:element name="_TransportTypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailsEntityBase" nillable="true" type="tns:MailsEntityBase" />
+  <xs:complexType name="ArrayOfMailItemEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailItemEntity" nillable="true" type="tns:MailItemEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailItemEntity" nillable="true" type="tns:ArrayOfMailItemEntity" />
+  <xs:complexType name="MailItemEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MailItemEntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DATE_DEPARTURE" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DESTINATION_IMPC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ITEM_NUMBER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MAIL_NUMBER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MAIL_SUB_CLASS_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ORIGIN_IMPC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransportTypeId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailItemEntity" nillable="true" type="tns:MailItemEntity" />
+  <xs:complexType name="MailItemEntityBase">
+    <xs:sequence>
+      <xs:element name="_CreateDate" type="xs:dateTime" />
+      <xs:element name="_EndWorkingID" type="xs:int" />
+      <xs:element name="_ID" type="xs:int" />
+      <xs:element name="_ITEM_ID" type="xs:int" />
+      <xs:element name="_ITEM_STATUS" type="xs:int" />
+      <xs:element name="_InternalChangedIsNullCreateDate" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullEndWorkingID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullITEM_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullITEM_STATUS" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullMAIL_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullReceptacleNumber" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullUSER_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullUpload" type="xs:boolean" />
+      <xs:element name="_IsNullCreateDate" type="xs:boolean" />
+      <xs:element name="_IsNullEndWorkingID" type="xs:boolean" />
+      <xs:element name="_IsNullID" type="xs:boolean" />
+      <xs:element name="_IsNullITEM_ID" type="xs:boolean" />
+      <xs:element name="_IsNullITEM_STATUS" type="xs:boolean" />
+      <xs:element name="_IsNullMAIL_ID" type="xs:boolean" />
+      <xs:element name="_IsNullReceptacleNumber" type="xs:boolean" />
+      <xs:element name="_IsNullUSER_ID" type="xs:boolean" />
+      <xs:element name="_IsNullUpload" type="xs:boolean" />
+      <xs:element name="_MAIL_ID" type="xs:int" />
+      <xs:element name="_ReceptacleNumber" type="xs:int" />
+      <xs:element name="_USER_ID" type="xs:int" />
+      <xs:element name="_Upload" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailItemEntityBase" nillable="true" type="tns:MailItemEntityBase" />
+  <xs:complexType name="ArrayOfReceptaclesEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReceptaclesEntity" nillable="true" type="tns:ReceptaclesEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReceptaclesEntity" nillable="true" type="tns:ArrayOfReceptaclesEntity" />
+  <xs:complexType name="ReceptaclesEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ReceptaclesEntityBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReceptaclesEntity" nillable="true" type="tns:ReceptaclesEntity" />
+  <xs:complexType name="ReceptaclesEntityBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BCCI_Weight" type="xs:int" />
+      <xs:element minOccurs="0" name="COVER_WEIGHT" type="xs:int" />
+      <xs:element minOccurs="0" name="DateCreate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Destination_Impc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empty_Weight" type="xs:int" />
+      <xs:element minOccurs="0" name="EndWorkingID" type="xs:int" />
+      <xs:element minOccurs="0" name="Exempt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FreeWeight" type="xs:int" />
+      <xs:element minOccurs="0" name="HIGHEST_NUMBER" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="InBag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InBagNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="IsNullBCCI_Weight" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullCOVER_WEIGHT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullDateCreate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullDestination_Impc" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullEmpty_Weight" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullEndWorkingID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullExempt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullFreeWeight" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullHIGHEST_NUMBER" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullInBag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullInBagNumber" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullMAIL_ID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullMail_Number" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullMedium" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullOE_ID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullOrigin_Impc" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullREGISTERED_INSURED" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullR_Weight" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullRealWeight" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullSERIAL_NUMBER" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullTYPE" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullTotalEmpty" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullTotalNormal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullTotal_InBag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullUserID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullWEIGHT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNullWeightNormal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MAIL_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Mail_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Medium" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Origin_Impc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTERED_INSURED" type="xs:boolean" />
+      <xs:element minOccurs="0" name="R_Weight" type="xs:int" />
+      <xs:element minOccurs="0" name="RealWeight" type="xs:int" />
+      <xs:element minOccurs="0" name="SERIAL_NUMBER" type="xs:int" />
+      <xs:element minOccurs="0" name="TYPE" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalEmpty" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalNormal" type="xs:int" />
+      <xs:element minOccurs="0" name="Total_InBag" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="WEIGHT" type="xs:int" />
+      <xs:element minOccurs="0" name="WeightNormal" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceptaclesEntityBase" nillable="true" type="tns:ReceptaclesEntityBase" />
+  <xs:complexType name="ArrayOfTransportsEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransportsEntity" nillable="true" type="tns:TransportsEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransportsEntity" nillable="true" type="tns:ArrayOfTransportsEntity" />
+  <xs:complexType name="TransportsEntity">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransportsEntityBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransportsEntity" nillable="true" type="tns:TransportsEntity" />
+  <xs:complexType name="TransportsEntityBase">
+    <xs:sequence>
+      <xs:element name="_END_DATE" type="xs:dateTime" />
+      <xs:element name="_ID" type="xs:int" />
+      <xs:element name="_InternalChangedIsNullEND_DATE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullNAME" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullORIGIN_END_TIME" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullORIGIN_START_TIME" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullSTART_DATE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTRANSIT_DATE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTRANSIT_END_TIME" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTRANSIT_START_TIME" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTRANSIT_TRANSPORT_NO" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTRANSPORT_DATE" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTRANSPORT_NO" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullTRANSPORT_TYPE_ID" type="xs:boolean" />
+      <xs:element name="_InternalChangedIsNullVIA" type="xs:boolean" />
+      <xs:element name="_IsNullEND_DATE" type="xs:boolean" />
+      <xs:element name="_IsNullID" type="xs:boolean" />
+      <xs:element name="_IsNullNAME" type="xs:boolean" />
+      <xs:element name="_IsNullORIGIN_END_TIME" type="xs:boolean" />
+      <xs:element name="_IsNullORIGIN_START_TIME" type="xs:boolean" />
+      <xs:element name="_IsNullSTART_DATE" type="xs:boolean" />
+      <xs:element name="_IsNullTRANSIT_DATE" type="xs:boolean" />
+      <xs:element name="_IsNullTRANSIT_END_TIME" type="xs:boolean" />
+      <xs:element name="_IsNullTRANSIT_START_TIME" type="xs:boolean" />
+      <xs:element name="_IsNullTRANSIT_TRANSPORT_NO" type="xs:boolean" />
+      <xs:element name="_IsNullTRANSPORT_DATE" type="xs:boolean" />
+      <xs:element name="_IsNullTRANSPORT_NO" type="xs:boolean" />
+      <xs:element name="_IsNullTRANSPORT_TYPE_ID" type="xs:boolean" />
+      <xs:element name="_IsNullVIA" type="xs:boolean" />
+      <xs:element name="_NAME" nillable="true" type="xs:string" />
+      <xs:element name="_ORIGIN_END_TIME" nillable="true" type="xs:string" />
+      <xs:element name="_ORIGIN_START_TIME" nillable="true" type="xs:string" />
+      <xs:element name="_START_DATE" type="xs:dateTime" />
+      <xs:element name="_TRANSIT_DATE" nillable="true" type="xs:string" />
+      <xs:element name="_TRANSIT_END_TIME" nillable="true" type="xs:string" />
+      <xs:element name="_TRANSIT_START_TIME" nillable="true" type="xs:string" />
+      <xs:element name="_TRANSIT_TRANSPORT_NO" nillable="true" type="xs:string" />
+      <xs:element name="_TRANSPORT_DATE" nillable="true" type="xs:string" />
+      <xs:element name="_TRANSPORT_NO" nillable="true" type="xs:string" />
+      <xs:element name="_TRANSPORT_TYPE_ID" type="xs:int" />
+      <xs:element name="_VIA" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransportsEntityBase" nillable="true" type="tns:TransportsEntityBase" />
+</xs:schema>

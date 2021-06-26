@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/RevenueDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/RevenueDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/RevenueDataSet.xsd" id="RevenueDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="RevenueDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="bcn_commissiontodelivery">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="ID" type="xs:int" />
+              <xs:element name="Levelweight" type="xs:int" />
+              <xs:element name="Region" type="xs:int" />
+              <xs:element name="IsSubOffice" type="xs:int" />
+              <xs:element minOccurs="0" name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VASICode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ems_Value" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RevenueSharingItemType">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="InProvinceA" type="xs:double" />
+              <xs:element minOccurs="0" name="InProvinceB" type="xs:double" />
+              <xs:element minOccurs="0" name="OutProvince" type="xs:double" />
+              <xs:element minOccurs="0" name="International" type="xs:double" />
+              <xs:element name="ItemType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RevenueSharingValueAddedService">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="InProvinceA" type="xs:double" />
+              <xs:element minOccurs="0" name="InProvinceB" type="xs:double" />
+              <xs:element minOccurs="0" name="OutProvince" type="xs:double" />
+              <xs:element minOccurs="0" name="International" type="xs:double" />
+              <xs:element name="ValueAddedService">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:bcn_commissiontodelivery" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="RevenueSharingItemType_Constraint1">
+      <xs:selector xpath=".//mstns:RevenueSharingItemType" />
+      <xs:field xpath="mstns:ProvinceCode" />
+      <xs:field xpath="mstns:ValueDate" />
+      <xs:field xpath="mstns:ItemType" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="RevenueSharingValueAddedService_Constraint1">
+      <xs:selector xpath=".//mstns:RevenueSharingValueAddedService" />
+      <xs:field xpath="mstns:ProvinceCode" />
+      <xs:field xpath="mstns:ValueDate" />
+      <xs:field xpath="mstns:ValueAddedService" />
+      <xs:field xpath="mstns:ServiceCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

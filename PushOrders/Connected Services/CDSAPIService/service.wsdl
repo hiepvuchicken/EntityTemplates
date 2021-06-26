@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CDSAPIService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="APIwsEndpointNoSec_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/PTC.BusinessLayer.Core" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Management" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICDSAPIService_ConvertCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertCurrency" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_ConvertCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetDecisionNameAndCategoryFromCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionNameAndCategoryFromCode" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetDecisionNameAndCategoryFromCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecisionNameAndCategoryFromCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_Load_InputMessage">
+    <wsdl:part name="parameters" element="tns:Load" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_Load_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetCustomsStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomsStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetCustomsStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomsStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_CreateNewDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_CreateNewDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_CreateNewResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_CreateNewResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_StoreDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:StoreDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_StoreDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StoreDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_StoreResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:StoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_StoreResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StoreResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_CreateOrUpdateDeclarations_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateDeclarations" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_CreateOrUpdateDeclarations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateDeclarationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_CreateOrUpdateResponses_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateResponses" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_CreateOrUpdateResponses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrUpdateResponsesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_UpdateMailState_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMailState" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_UpdateMailState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMailStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_ConvertAnonymousToCDSDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertAnonymousToCDSDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_ConvertAnonymousToCDSDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertAnonymousToCDSDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetHSCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHSCodes" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetHSCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHSCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetRestrictionProhibitionByDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestrictionProhibitionByDescription" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetRestrictionProhibitionByDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestrictionProhibitionByDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetRestrictionProhibitionByHS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestrictionProhibitionByHS" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetRestrictionProhibitionByHS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestrictionProhibitionByHSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetWatchdogItemInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWatchdogItemInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_GetWatchdogItemInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWatchdogItemInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_SetWatchdogItemInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetWatchdogItemInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICDSAPIService_SetWatchdogItemInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetWatchdogItemInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICDSAPIService">
+    <wsdl:operation name="ConvertCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/ConvertCurrency" message="tns:ICDSAPIService_ConvertCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/ConvertCurrencyResponse" message="tns:ICDSAPIService_ConvertCurrency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionNameAndCategoryFromCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/GetDecisionNameAndCategoryFromCode" message="tns:ICDSAPIService_GetDecisionNameAndCategoryFromCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/GetDecisionNameAndCategoryFromCodeResponse" message="tns:ICDSAPIService_GetDecisionNameAndCategoryFromCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Load">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/Load" message="tns:ICDSAPIService_Load_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/LoadResponse" message="tns:ICDSAPIService_Load_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomsStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/GetCustomsStatus" message="tns:ICDSAPIService_GetCustomsStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/GetCustomsStatusResponse" message="tns:ICDSAPIService_GetCustomsStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/CreateNewDeclaration" message="tns:ICDSAPIService_CreateNewDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/CreateNewDeclarationResponse" message="tns:ICDSAPIService_CreateNewDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/CreateNewResponse" message="tns:ICDSAPIService_CreateNewResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/CreateNewResponseResponse" message="tns:ICDSAPIService_CreateNewResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/StoreDeclaration" message="tns:ICDSAPIService_StoreDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/StoreDeclarationResponse" message="tns:ICDSAPIService_StoreDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/StoreResponse" message="tns:ICDSAPIService_StoreResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/StoreResponseResponse" message="tns:ICDSAPIService_StoreResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateDeclarations">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/CreateOrUpdateDeclarations" message="tns:ICDSAPIService_CreateOrUpdateDeclarations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/CreateOrUpdateDeclarationsResponse" message="tns:ICDSAPIService_CreateOrUpdateDeclarations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateResponses">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/CreateOrUpdateResponses" message="tns:ICDSAPIService_CreateOrUpdateResponses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/CreateOrUpdateResponsesResponse" message="tns:ICDSAPIService_CreateOrUpdateResponses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailState">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/UpdateMailState" message="tns:ICDSAPIService_UpdateMailState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/UpdateMailStateResponse" message="tns:ICDSAPIService_UpdateMailState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertAnonymousToCDSDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/ConvertAnonymousToCDSDeclaration" message="tns:ICDSAPIService_ConvertAnonymousToCDSDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/ConvertAnonymousToCDSDeclarationResponse" message="tns:ICDSAPIService_ConvertAnonymousToCDSDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHSCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/GetHSCodes" message="tns:ICDSAPIService_GetHSCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/GetHSCodesResponse" message="tns:ICDSAPIService_GetHSCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictionProhibitionByDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/GetRestrictionProhibitionByDescription" message="tns:ICDSAPIService_GetRestrictionProhibitionByDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/GetRestrictionProhibitionByDescriptionResponse" message="tns:ICDSAPIService_GetRestrictionProhibitionByDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictionProhibitionByHS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/GetRestrictionProhibitionByHS" message="tns:ICDSAPIService_GetRestrictionProhibitionByHS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/GetRestrictionProhibitionByHSResponse" message="tns:ICDSAPIService_GetRestrictionProhibitionByHS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchdogItemInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/GetWatchdogItemInfo" message="tns:ICDSAPIService_GetWatchdogItemInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/GetWatchdogItemInfoResponse" message="tns:ICDSAPIService_GetWatchdogItemInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWatchdogItemInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSAPIService/SetWatchdogItemInfo" message="tns:ICDSAPIService_SetWatchdogItemInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSAPIService/SetWatchdogItemInfoResponse" message="tns:ICDSAPIService_SetWatchdogItemInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APIwsEndpointNoSec" type="tns:ICDSAPIService">
+    <wsp:PolicyReference URI="#APIwsEndpointNoSec_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConvertCurrency">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/ConvertCurrency" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDecisionNameAndCategoryFromCode">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/GetDecisionNameAndCategoryFromCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Load">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/Load" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomsStatus">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/GetCustomsStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewDeclaration">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/CreateNewDeclaration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewResponse">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/CreateNewResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreDeclaration">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/StoreDeclaration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreResponse">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/StoreResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateDeclarations">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/CreateOrUpdateDeclarations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrUpdateResponses">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/CreateOrUpdateResponses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailState">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/UpdateMailState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertAnonymousToCDSDeclaration">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/ConvertAnonymousToCDSDeclaration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHSCodes">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/GetHSCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictionProhibitionByDescription">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/GetRestrictionProhibitionByDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictionProhibitionByHS">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/GetRestrictionProhibitionByHS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWatchdogItemInfo">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/GetWatchdogItemInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWatchdogItemInfo">
+      <soap12:operation soapAction="http://tempuri.org/ICDSAPIService/SetWatchdogItemInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CDSAPIService">
+    <wsdl:port name="APIwsEndpointNoSec" binding="tns:APIwsEndpointNoSec">
+      <soap12:address location="http://cds/CDS.API/CDSAPIService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://cds/CDS.API/CDSAPIService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

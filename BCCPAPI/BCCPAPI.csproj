@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6413463-0F16-4CCC-AA4E-BED4E7735AAF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BCCPAPI</RootNamespace>
+    <AssemblyName>BCCPAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\gw\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\gw\BatchDataSet.xsd" />
+    <None Include="Connected Services\gw\BC37DataSet.xsd" />
+    <None Include="Connected Services\gw\BCCPAPI.gw.BatchDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.BC37DataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.BD29DataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.CODDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.CommodityTypeDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.DeliveryDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.DeliveryRouteDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.DomesticFreightRuleDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.InternationalFreightRuleDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.ItemDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.ItemTypeDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.MailRouteDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.MailTripDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.MailTripListDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.MailTripTransportDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.Messages.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.PayPostDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.POSDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.RevenueDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.TraceItemDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.TracePostBagDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.UnitDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BCCPAPI.gw.ValueAddedServiceDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\BD29DataSet.xsd" />
+    <None Include="Connected Services\gw\CODDataSet.xsd" />
+    <None Include="Connected Services\gw\CommodityTypeDataSet.xsd" />
+    <None Include="Connected Services\gw\DeliveryDataSet.xsd" />
+    <None Include="Connected Services\gw\DeliveryRouteDataSet.xsd" />
+    <None Include="Connected Services\gw\DomesticFreightRuleDataSet.xsd" />
+    <None Include="Connected Services\gw\ExchangeService.wsdl" />
+    <None Include="Connected Services\gw\InternationalFreightRuleDataSet.xsd" />
+    <None Include="Connected Services\gw\item.wsdl" />
+    <None Include="Connected Services\gw\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\gw\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\gw\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\gw\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\gw\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\gw\item5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\gw\ItemDataSet.xsc">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\ItemDataSet.xsd" />
+    <None Include="Connected Services\gw\ItemDataSet.xss">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Connected Services\gw\ItemTypeDataSet.xsd" />
+    <None Include="Connected Services\gw\MailRouteDataSet.xsd" />
+    <None Include="Connected Services\gw\MailTripDataSet.xsd" />
+    <None Include="Connected Services\gw\MailTripListDataSet.xsd" />
+    <None Include="Connected Services\gw\MailTripTransportDataSet.xsd" />
+    <None Include="Connected Services\gw\PayPostDataSet.xsd" />
+    <None Include="Connected Services\gw\POSDataSet.xsd" />
+    <None Include="Connected Services\gw\RevenueDataSet.xsd" />
+    <None Include="Connected Services\gw\TraceItemDataSet.xsd" />
+    <None Include="Connected Services\gw\TracePostBagDataSet.xsd" />
+    <None Include="Connected Services\gw\UnitDataSet.xsd" />
+    <None Include="Connected Services\gw\ValueAddedServiceDataSet.xsd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\gw\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\gw\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\gw\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\gw\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\gw\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

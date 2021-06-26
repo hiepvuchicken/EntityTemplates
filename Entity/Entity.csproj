@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AB6F03B-0371-4555-BACB-C21603FA7E7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entity</RootNamespace>
+    <AssemblyName>Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ALLCODE.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUTHOR.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaoPhatModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoPhatModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaoPhatModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoPhatModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaoPhatModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoPhatModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKINFO.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKINFO_IMG.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKTYPE.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOK_INOUT.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOK_STORE.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CollectItem.cs">
+      <DependentUpon>DieutinModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DieutinModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DieutinModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DieutinModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DieutinModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DieutinModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DieutinModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ExploitUser.cs">
+      <DependentUpon>DieutinModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FIELD.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryManagement.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryManagement.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LIBRARY_CARD.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIBRARY_EVENT.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIBRARY_EVENT_IMG.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PUBLISHER.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="service_process_LoadItemDetails_printf_v3_Result.cs">
+      <DependentUpon>BaoPhatModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="service_process_LoadItemForPosman_printf_v2_dev_Result.cs">
+      <DependentUpon>BaoPhatModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="service_process_LoadItemList_printf_dev_Result.cs">
+      <DependentUpon>BaoPhatModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="service_process_LoadItemList_printf_Result.cs">
+      <DependentUpon>BaoPhatModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SMP_GetCollectItem_Result.cs">
+      <DependentUpon>DieutinModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SyncPost_GetProvince_Result.cs">
+      <DependentUpon>DieutinModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TLPROFILE.cs">
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>DieutinModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="DieutinModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DieutinModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="BaoPhatModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BaoPhatModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BaoPhatModel.edmx.diagram">
+      <DependentUpon>BaoPhatModel.edmx</DependentUpon>
+    </None>
+    <None Include="DieutinModel.edmx.diagram">
+      <DependentUpon>DieutinModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="LibraryManagement.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LibraryManagement.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LibraryManagement.edmx.diagram">
+      <DependentUpon>LibraryManagement.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaoPhatModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaoPhatModel.edmx</DependentUpon>
+      <LastGenOutput>BaoPhatModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BaoPhatModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BaoPhatModel.edmx</DependentUpon>
+      <LastGenOutput>BaoPhatModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="DieutinModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DieutinModel.edmx</DependentUpon>
+      <LastGenOutput>DieutinModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DieutinModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DieutinModel.edmx</DependentUpon>
+      <LastGenOutput>DieutinModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="LibraryManagement.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryManagement.edmx</DependentUpon>
+      <LastGenOutput>LibraryManagement.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LibraryManagement.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryManagement.edmx</DependentUpon>
+      <LastGenOutput>LibraryManagement.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

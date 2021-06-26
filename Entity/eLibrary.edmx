@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="eLibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ALLCODES">
+          <Key>
+            <PropertyRef Name="CODE" />
+            <PropertyRef Name="VALUE" />
+          </Key>
+          <Property Name="CODE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="VALUE" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
+          <Property Name="LSTODR" Type="varchar" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="AUTHORS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AUTHOR_FULLNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="AUTHOR_NAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="AUTHOR_SITE" Type="varchar" MaxLength="255" />
+          <Property Name="AUTHOR_PHONE" Type="varchar" MaxLength="100" />
+          <Property Name="AUTHOR_DESC" Type="nvarchar" MaxLength="500" />
+          <Property Name="AUTHOR_STATUS" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="BOOKS">
+          <Key>
+            <PropertyRef Name="BOOK_ID" />
+          </Key>
+          <Property Name="BOOK_ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="BOOK_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="BOOK_TOTALPAGE" Type="varchar" MaxLength="10" />
+          <Property Name="BOOK_FILEPATH" Type="nvarchar" MaxLength="500" />
+          <Property Name="BOOK_AVAR" Type="nvarchar" MaxLength="500" />
+          <Property Name="BOOK_DESC" Type="nvarchar" MaxLength="500" />
+          <Property Name="BOOK_STATUS" Type="varchar" MaxLength="1" />
+          <Property Name="BOOK_AUTHOR_ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="BOOK_BOOKTYPE_ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="BOOK_FIELD_ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="BOOK_PUBLISHER_ID" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BOOKTYPIES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="BOOKTYPE_FULLNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="BOOKTYPE_NAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="BOOKTYPE_DESC" Type="nvarchar" MaxLength="500" />
+          <Property Name="BOOKTYPE_STATUS" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="FIELDS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="FIELD_FULLNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="FIELD_NAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="FIELD_DESC" Type="nvarchar" MaxLength="500" />
+          <Property Name="FIELD_STATUS" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="LIBRARYCARDS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="LIBRARY_CARD_TLID" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="LIBRARY_CARD_DESC" Type="nvarchar" MaxLength="500" />
+          <Property Name="LIBRARY_CARD_STATUS" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'eLibrary.dbo.MENUGROUPS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MENUGROUPS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="MENUS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+          <Property Name="URL" Type="nvarchar" MaxLength="500" />
+          <Property Name="DISPLAY_ORDER" Type="int" />
+          <Property Name="GROUP_ID" Type="int" />
+          <Property Name="TARGET" Type="varchar" MaxLength="10" />
+          <Property Name="STATUS" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PUBLISHERS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="PUBLISHER_FULLNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PUBLISHER_NAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="PUBLISHER_SITE" Type="nvarchar" MaxLength="500" />
+          <Property Name="PUBLISHER_ADDRESS" Type="nvarchar" MaxLength="500" />
+          <Property Name="PUBLISHER_PHONE" Type="varchar" MaxLength="50" />
+          <Property Name="PUBLISHER_DESC" Type="nvarchar" MaxLength="500" />
+          <Property Name="PUBLISHER_STATUS" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="SLIDES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="250" />
+          <Property Name="IMAGE" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="URL" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="DISPLAY_ORDER" Type="int" />
+          <Property Name="STATUS" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TLPROFILES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="50" />
+          <Property Name="FULLNAME" Type="nvarchar" MaxLength="100" />
+          <Property Name="PIN" Type="varchar" MaxLength="100" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="1000" />
+          <Property Name="TYPE" Type="varchar" MaxLength="4" />
+          <Property Name="STATUS" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="500" />
+          <Property Name="ADDRESS" Type="nvarchar" MaxLength="500" />
+          <Property Name="IDCODE" Type="varchar" MaxLength="50" />
+          <Property Name="IDDATE" Type="varchar" MaxLength="20" />
+          <Property Name="IDPLACE" Type="nvarchar" MaxLength="200" />
+          <Property Name="MOBILE" Type="varchar" MaxLength="50" />
+          <Property Name="FORGOTCODE" Type="uniqueidentifier" />
+          <Property Name="FORGOT_EXPRIED" Type="varchar" MaxLength="1" />
+          <Property Name="GENDER" Type="varchar" MaxLength="1" />
+          <Property Name="CREATED_DATE" Type="datetime" />
+          <Property Name="CREATED_BY" Type="varchar" MaxLength="4" />
+          <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="UPDATED_BY" Type="varchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="VISITOR_STATISTICS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="VISITED_DATE" Type="datetime" />
+          <Property Name="IP_ADDRESS" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_BOOKS_AUTHORS">
+          <End Role="AUTHORS" Type="Self.AUTHORS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AUTHORS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BOOK_AUTHOR_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BOOKS_BOOKTYPIES">
+          <End Role="BOOKTYPIES" Type="Self.BOOKTYPIES" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOKTYPIES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BOOK_BOOKTYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BOOKS_FIELDS">
+          <End Role="FIELDS" Type="Self.FIELDS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FIELDS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BOOK_FIELD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BOOKS_PUBLISHERS">
+          <End Role="PUBLISHERS" Type="Self.PUBLISHERS" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BOOK_PUBLISHER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="eLibraryModelStoreContainer">
+          <EntitySet Name="ALLCODES" EntityType="Self.ALLCODES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AUTHORS" EntityType="Self.AUTHORS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BOOKS" EntityType="Self.BOOKS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BOOKTYPIES" EntityType="Self.BOOKTYPIES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FIELDS" EntityType="Self.FIELDS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LIBRARYCARDS" EntityType="Self.LIBRARYCARDS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MENUS" EntityType="Self.MENUS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PUBLISHERS" EntityType="Self.PUBLISHERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SLIDES" EntityType="Self.SLIDES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TLPROFILES" EntityType="Self.TLPROFILES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VISITOR_STATISTICS" EntityType="Self.VISITOR_STATISTICS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MENUGROUPS" EntityType="Self.MENUGROUPS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MENUGROUPS].[ID] AS [ID], 
+    [MENUGROUPS].[NAME] AS [NAME]
+    FROM [dbo].[MENUGROUPS] AS [MENUGROUPS]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_BOOKS_AUTHORS" Association="Self.FK_BOOKS_AUTHORS">
+            <End Role="AUTHORS" EntitySet="AUTHORS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BOOKS_BOOKTYPIES" Association="Self.FK_BOOKS_BOOKTYPIES">
+            <End Role="BOOKTYPIES" EntitySet="BOOKTYPIES" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BOOKS_FIELDS" Association="Self.FK_BOOKS_FIELDS">
+            <End Role="FIELDS" EntitySet="FIELDS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BOOKS_PUBLISHERS" Association="Self.FK_BOOKS_PUBLISHERS">
+            <End Role="PUBLISHERS" EntitySet="PUBLISHERS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="eLibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ALLCODE">
+          <Key>
+            <PropertyRef Name="CODE" />
+            <PropertyRef Name="VALUE" />
+          </Key>
+          <Property Name="CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VALUE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LSTODR" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AUTHOR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AUTHOR_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AUTHOR_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AUTHOR_SITE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AUTHOR_PHONE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AUTHOR_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AUTHOR_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK_BOOKS_AUTHORS" FromRole="AUTHORS" ToRole="BOOKS" />
+        </EntityType>
+        <EntityType Name="BOOK">
+          <Key>
+            <PropertyRef Name="BOOK_ID" />
+          </Key>
+          <Property Name="BOOK_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BOOK_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BOOK_TOTALPAGE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BOOK_FILEPATH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BOOK_AVAR" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BOOK_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BOOK_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BOOK_AUTHOR_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BOOK_BOOKTYPE_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BOOK_FIELD_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BOOK_PUBLISHER_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="AUTHOR" Relationship="Self.FK_BOOKS_AUTHORS" FromRole="BOOKS" ToRole="AUTHORS" />
+          <NavigationProperty Name="BOOKTYPy" Relationship="Self.FK_BOOKS_BOOKTYPIES" FromRole="BOOKS" ToRole="BOOKTYPIES" />
+          <NavigationProperty Name="FIELD" Relationship="Self.FK_BOOKS_FIELDS" FromRole="BOOKS" ToRole="FIELDS" />
+          <NavigationProperty Name="PUBLISHER" Relationship="Self.FK_BOOKS_PUBLISHERS" FromRole="BOOKS" ToRole="PUBLISHERS" />
+        </EntityType>
+        <EntityType Name="BOOKTYPy">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BOOKTYPE_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BOOKTYPE_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BOOKTYPE_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BOOKTYPE_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK_BOOKS_BOOKTYPIES" FromRole="BOOKTYPIES" ToRole="BOOKS" />
+        </EntityType>
+        <EntityType Name="FIELD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FIELD_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FIELD_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FIELD_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="FIELD_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK_BOOKS_FIELDS" FromRole="FIELDS" ToRole="BOOKS" />
+        </EntityType>
+        <EntityType Name="LIBRARYCARD">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LIBRARY_CARD_TLID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LIBRARY_CARD_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LIBRARY_CARD_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MENU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DISPLAY_ORDER" Type="Int32" />
+          <Property Name="GROUP_ID" Type="Int32" />
+          <Property Name="TARGET" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PUBLISHER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PUBLISHER_FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PUBLISHER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER_SITE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER_ADDRESS" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER_PHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PUBLISHER_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PUBLISHER_STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BOOKS" Relationship="Self.FK_BOOKS_PUBLISHERS" FromRole="PUBLISHERS" ToRole="BOOKS" />
+        </EntityType>
+        <EntityType Name="SLIDE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DISPLAY_ORDER" Type="Int32" />
+          <Property Name="STATUS" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TLPROFILE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FULLNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PIN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ADDRESS" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IDCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDDATE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IDPLACE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MOBILE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FORGOTCODE" Type="Guid" />
+          <Property Name="FORGOT_EXPRIED" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="GENDER" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CREATED_BY" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="UPDATED_BY" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VISITOR_STATISTICS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="VISITED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="IP_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MENUGROUP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_BOOKS_AUTHORS">
+          <End Role="AUTHORS" Type="Self.AUTHOR" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AUTHORS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BOOK_AUTHOR_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BOOKS_BOOKTYPIES">
+          <End Role="BOOKTYPIES" Type="Self.BOOKTYPy" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOKTYPIES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BOOK_BOOKTYPE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BOOKS_FIELDS">
+          <End Role="FIELDS" Type="Self.FIELD" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FIELDS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BOOK_FIELD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BOOKS_PUBLISHERS">
+          <End Role="PUBLISHERS" Type="Self.PUBLISHER" Multiplicity="1" />
+          <End Role="BOOKS" Type="Self.BOOK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHERS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="BOOK_PUBLISHER_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="eLibraryEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ALLCODES" EntityType="Self.ALLCODE" />
+          <EntitySet Name="AUTHORS" EntityType="Self.AUTHOR" />
+          <EntitySet Name="BOOKS" EntityType="Self.BOOK" />
+          <EntitySet Name="BOOKTYPIES" EntityType="Self.BOOKTYPy" />
+          <EntitySet Name="FIELDS" EntityType="Self.FIELD" />
+          <EntitySet Name="LIBRARYCARDS" EntityType="Self.LIBRARYCARD" />
+          <EntitySet Name="MENUS" EntityType="Self.MENU" />
+          <EntitySet Name="PUBLISHERS" EntityType="Self.PUBLISHER" />
+          <EntitySet Name="SLIDES" EntityType="Self.SLIDE" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TLPROFILES" EntityType="Self.TLPROFILE" />
+          <EntitySet Name="VISITOR_STATISTICS" EntityType="Self.VISITOR_STATISTICS" />
+          <EntitySet Name="MENUGROUPS" EntityType="Self.MENUGROUP" />
+          <AssociationSet Name="FK_BOOKS_AUTHORS" Association="Self.FK_BOOKS_AUTHORS">
+            <End Role="AUTHORS" EntitySet="AUTHORS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BOOKS_BOOKTYPIES" Association="Self.FK_BOOKS_BOOKTYPIES">
+            <End Role="BOOKTYPIES" EntitySet="BOOKTYPIES" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BOOKS_FIELDS" Association="Self.FK_BOOKS_FIELDS">
+            <End Role="FIELDS" EntitySet="FIELDS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BOOKS_PUBLISHERS" Association="Self.FK_BOOKS_PUBLISHERS">
+            <End Role="PUBLISHERS" EntitySet="PUBLISHERS" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="eLibraryModelStoreContainer" CdmEntityContainer="eLibraryEntities">
+          <EntitySetMapping Name="ALLCODES">
+            <EntityTypeMapping TypeName="eLibraryModel.ALLCODE">
+              <MappingFragment StoreEntitySet="ALLCODES">
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="LSTODR" ColumnName="LSTODR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AUTHORS">
+            <EntityTypeMapping TypeName="eLibraryModel.AUTHOR">
+              <MappingFragment StoreEntitySet="AUTHORS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AUTHOR_FULLNAME" ColumnName="AUTHOR_FULLNAME" />
+                <ScalarProperty Name="AUTHOR_NAME" ColumnName="AUTHOR_NAME" />
+                <ScalarProperty Name="AUTHOR_SITE" ColumnName="AUTHOR_SITE" />
+                <ScalarProperty Name="AUTHOR_PHONE" ColumnName="AUTHOR_PHONE" />
+                <ScalarProperty Name="AUTHOR_DESC" ColumnName="AUTHOR_DESC" />
+                <ScalarProperty Name="AUTHOR_STATUS" ColumnName="AUTHOR_STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOKS">
+            <EntityTypeMapping TypeName="eLibraryModel.BOOK">
+              <MappingFragment StoreEntitySet="BOOKS">
+                <ScalarProperty Name="BOOK_ID" ColumnName="BOOK_ID" />
+                <ScalarProperty Name="BOOK_NAME" ColumnName="BOOK_NAME" />
+                <ScalarProperty Name="BOOK_TOTALPAGE" ColumnName="BOOK_TOTALPAGE" />
+                <ScalarProperty Name="BOOK_FILEPATH" ColumnName="BOOK_FILEPATH" />
+                <ScalarProperty Name="BOOK_AVAR" ColumnName="BOOK_AVAR" />
+                <ScalarProperty Name="BOOK_DESC" ColumnName="BOOK_DESC" />
+                <ScalarProperty Name="BOOK_STATUS" ColumnName="BOOK_STATUS" />
+                <ScalarProperty Name="BOOK_AUTHOR_ID" ColumnName="BOOK_AUTHOR_ID" />
+                <ScalarProperty Name="BOOK_BOOKTYPE_ID" ColumnName="BOOK_BOOKTYPE_ID" />
+                <ScalarProperty Name="BOOK_FIELD_ID" ColumnName="BOOK_FIELD_ID" />
+                <ScalarProperty Name="BOOK_PUBLISHER_ID" ColumnName="BOOK_PUBLISHER_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOKTYPIES">
+            <EntityTypeMapping TypeName="eLibraryModel.BOOKTYPy">
+              <MappingFragment StoreEntitySet="BOOKTYPIES">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BOOKTYPE_FULLNAME" ColumnName="BOOKTYPE_FULLNAME" />
+                <ScalarProperty Name="BOOKTYPE_NAME" ColumnName="BOOKTYPE_NAME" />
+                <ScalarProperty Name="BOOKTYPE_DESC" ColumnName="BOOKTYPE_DESC" />
+                <ScalarProperty Name="BOOKTYPE_STATUS" ColumnName="BOOKTYPE_STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FIELDS">
+            <EntityTypeMapping TypeName="eLibraryModel.FIELD">
+              <MappingFragment StoreEntitySet="FIELDS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FIELD_FULLNAME" ColumnName="FIELD_FULLNAME" />
+                <ScalarProperty Name="FIELD_NAME" ColumnName="FIELD_NAME" />
+                <ScalarProperty Name="FIELD_DESC" ColumnName="FIELD_DESC" />
+                <ScalarProperty Name="FIELD_STATUS" ColumnName="FIELD_STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LIBRARYCARDS">
+            <EntityTypeMapping TypeName="eLibraryModel.LIBRARYCARD">
+              <MappingFragment StoreEntitySet="LIBRARYCARDS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LIBRARY_CARD_TLID" ColumnName="LIBRARY_CARD_TLID" />
+                <ScalarProperty Name="LIBRARY_CARD_DESC" ColumnName="LIBRARY_CARD_DESC" />
+                <ScalarProperty Name="LIBRARY_CARD_STATUS" ColumnName="LIBRARY_CARD_STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENUS">
+            <EntityTypeMapping TypeName="eLibraryModel.MENU">
+              <MappingFragment StoreEntitySet="MENUS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="DISPLAY_ORDER" ColumnName="DISPLAY_ORDER" />
+                <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+                <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUBLISHERS">
+            <EntityTypeMapping TypeName="eLibraryModel.PUBLISHER">
+              <MappingFragment StoreEntitySet="PUBLISHERS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PUBLISHER_FULLNAME" ColumnName="PUBLISHER_FULLNAME" />
+                <ScalarProperty Name="PUBLISHER_NAME" ColumnName="PUBLISHER_NAME" />
+                <ScalarProperty Name="PUBLISHER_SITE" ColumnName="PUBLISHER_SITE" />
+                <ScalarProperty Name="PUBLISHER_ADDRESS" ColumnName="PUBLISHER_ADDRESS" />
+                <ScalarProperty Name="PUBLISHER_PHONE" ColumnName="PUBLISHER_PHONE" />
+                <ScalarProperty Name="PUBLISHER_DESC" ColumnName="PUBLISHER_DESC" />
+                <ScalarProperty Name="PUBLISHER_STATUS" ColumnName="PUBLISHER_STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SLIDES">
+            <EntityTypeMapping TypeName="eLibraryModel.SLIDE">
+              <MappingFragment StoreEntitySet="SLIDES">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="DISPLAY_ORDER" ColumnName="DISPLAY_ORDER" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="eLibraryModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TLPROFILES">
+            <EntityTypeMapping TypeName="eLibraryModel.TLPROFILE">
+              <MappingFragment StoreEntitySet="TLPROFILES">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="FULLNAME" ColumnName="FULLNAME" />
+                <ScalarProperty Name="PIN" ColumnName="PIN" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="IDCODE" ColumnName="IDCODE" />
+                <ScalarProperty Name="IDDATE" ColumnName="IDDATE" />
+                <ScalarProperty Name="IDPLACE" ColumnName="IDPLACE" />
+                <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+                <ScalarProperty Name="FORGOTCODE" ColumnName="FORGOTCODE" />
+                <ScalarProperty Name="FORGOT_EXPRIED" ColumnName="FORGOT_EXPRIED" />
+                <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VISITOR_STATISTICS">
+            <EntityTypeMapping TypeName="eLibraryModel.VISITOR_STATISTICS">
+              <MappingFragment StoreEntitySet="VISITOR_STATISTICS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VISITED_DATE" ColumnName="VISITED_DATE" />
+                <ScalarProperty Name="IP_ADDRESS" ColumnName="IP_ADDRESS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENUGROUPS">
+            <EntityTypeMapping TypeName="eLibraryModel.MENUGROUP">
+              <MappingFragment StoreEntitySet="MENUGROUPS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

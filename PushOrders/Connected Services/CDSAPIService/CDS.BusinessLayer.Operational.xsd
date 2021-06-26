@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/PTC.BusinessLayer.Core" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfCDSView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CDSView" nillable="true" type="tns:CDSView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCDSView" nillable="true" type="tns:ArrayOfCDSView" />
+  <xs:complexType name="CDSView">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PTC.BusinessLayer.Core" base="q1:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DCResponse" nillable="true" type="tns:Response" />
+          <xs:element minOccurs="0" name="Declaration" nillable="true" type="tns:Declaration" />
+          <xs:element minOccurs="0" name="MailObject" nillable="true" type="tns:MailObject" />
+          <xs:element minOccurs="0" name="Response" nillable="true" type="tns:Response" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CDSView" nillable="true" type="tns:CDSView" />
+  <xs:complexType name="Response">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CDSObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Data" nillable="true" type="tns:Response.ResponseData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Response" nillable="true" type="tns:Response" />
+  <xs:complexType name="CDSObject">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/PTC.BusinessLayer.Core" base="q2:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CDSStateCd" type="xs:int" />
+          <xs:element minOccurs="0" name="CustOrganizationCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailObjectPId" type="ser:guid" />
+          <xs:element minOccurs="0" name="PId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="PostOrganizationCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XMLData" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CDSObject" nillable="true" type="tns:CDSObject" />
+  <xs:complexType name="Response.ResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClearanceDt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DecisionCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DecisionReasonCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DecisionReasonNm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dutiable" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtraFieldNames" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtraFieldValues" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Taxes" nillable="true" type="tns:ArrayOfResponse.ResponseData.Tax" />
+      <xs:element minOccurs="0" name="TotalFee" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalFeeCurrencyCd" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response.ResponseData" nillable="true" type="tns:Response.ResponseData" />
+  <xs:complexType name="ArrayOfResponse.ResponseData.Tax">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Response.ResponseData.Tax" nillable="true" type="tns:Response.ResponseData.Tax" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResponse.ResponseData.Tax" nillable="true" type="tns:ArrayOfResponse.ResponseData.Tax" />
+  <xs:complexType name="Response.ResponseData.Tax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtraFieldNames" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtraFieldValues" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element minOccurs="0" name="HS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NetWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Rate" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response.ResponseData.Tax" nillable="true" type="tns:Response.ResponseData.Tax" />
+  <xs:complexType name="Declaration">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CDSObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Data" nillable="true" type="tns:Declaration.DeclarationData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Declaration" nillable="true" type="tns:Declaration" />
+  <xs:complexType name="Declaration.DeclarationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContentPieces" nillable="true" type="tns:ArrayOfDeclaration.DeclarationData.ContentPiece" />
+      <xs:element minOccurs="0" name="Documents" nillable="true" type="tns:ArrayOfDeclaration.DeclarationData.Document" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtraFieldNames" nillable="true" type="q7:ArrayOfstring" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtraFieldValues" nillable="true" type="q8:ArrayOfstring" />
+      <xs:element minOccurs="0" name="GrossWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="HandlingClassCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsuredValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InsuredValueCurrencyCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxIndex" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NatureTypeCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageImageLocalPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageImageSourceInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postage" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PostageCurrencyCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientCountryCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientFax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientIdRef" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientTelephone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecipientZIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderCountryCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderIdRef" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderTelephone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenderZIP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TransportMode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Declaration.DeclarationData" nillable="true" type="tns:Declaration.DeclarationData" />
+  <xs:complexType name="ArrayOfDeclaration.DeclarationData.ContentPiece">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Declaration.DeclarationData.ContentPiece" nillable="true" type="tns:Declaration.DeclarationData.ContentPiece" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeclaration.DeclarationData.ContentPiece" nillable="true" type="tns:ArrayOfDeclaration.DeclarationData.ContentPiece" />
+  <xs:complexType name="Declaration.DeclarationData.ContentPiece">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CurrencyCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtraFieldNames" nillable="true" type="q9:ArrayOfstring" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtraFieldValues" nillable="true" type="q10:ArrayOfstring" />
+      <xs:element minOccurs="0" name="HS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImportRestrictions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImportRestrictionsNotes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Index" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NetWeight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OrigCountryCd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RevisedDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RevisedHS" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Declaration.DeclarationData.ContentPiece" nillable="true" type="tns:Declaration.DeclarationData.ContentPiece" />
+  <xs:complexType name="ArrayOfDeclaration.DeclarationData.Document">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Declaration.DeclarationData.Document" nillable="true" type="tns:Declaration.DeclarationData.Document" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeclaration.DeclarationData.Document" nillable="true" type="tns:ArrayOfDeclaration.DeclarationData.Document" />
+  <xs:complexType name="Declaration.DeclarationData.Document">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Declaration.DeclarationData.Document" nillable="true" type="tns:Declaration.DeclarationData.Document" />
+  <xs:complexType name="MailObject">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/PTC.BusinessLayer.Core" base="q11:Entity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DestPostOrgCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LocalId2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailCategoryCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailClassCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailStateCd" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="MailStateRemarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrigPostOrgCd" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PId" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="PostingDt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TypeCd" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailObject" nillable="true" type="tns:MailObject" />
+  <xs:complexType name="ArrayOfHSLookupInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HSLookupInfo" nillable="true" type="tns:HSLookupInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHSLookupInfo" nillable="true" type="tns:ArrayOfHSLookupInfo" />
+  <xs:complexType name="HSLookupInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HSCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observations" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HSLookupInfo" nillable="true" type="tns:HSLookupInfo" />
+  <xs:complexType name="WatchdogInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Operation" type="tns:WatchdogInfo.OperationType" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WatchdogInfo" nillable="true" type="tns:WatchdogInfo" />
+  <xs:simpleType name="WatchdogInfo.OperationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Clear">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MarkAsBlocked">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MarkWithWarning">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WatchdogInfo.OperationType" nillable="true" type="tns:WatchdogInfo.OperationType" />
+</xs:schema>

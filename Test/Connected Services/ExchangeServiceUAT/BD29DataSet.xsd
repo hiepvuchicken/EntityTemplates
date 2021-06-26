@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/BD29DataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/BD29DataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/BD29DataSet.xsd" id="BD29DataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="BD29DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RP_AcceptanceDetailReport">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TargetIndex" type="xs:int" />
+              <xs:element name="InsertedDate">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShiftCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReportTargetCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DonViPhat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CustomerCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="17" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="isHCC" type="xs:boolean" />
+              <xs:element minOccurs="0" name="ValueAddedServicesCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="isDomestic" type="xs:boolean" />
+              <xs:element minOccurs="0" name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="KhoiLuongThuc" type="xs:int" />
+              <xs:element minOccurs="0" name="KhoiLuongQuyDoi" type="xs:int" />
+              <xs:element minOccurs="0" name="CuocChinh" type="xs:int" />
+              <xs:element minOccurs="0" name="CuocGTGT" type="xs:int" />
+              <xs:element minOccurs="0" name="CuocThuHoChiHo" type="xs:int" />
+              <xs:element minOccurs="0" name="ThueVAT" type="xs:int" />
+              <xs:element minOccurs="0" name="TongTienMat" type="xs:int" />
+              <xs:element minOccurs="0" name="TongGhiNo" type="xs:int" />
+              <xs:element minOccurs="0" name="CuocThuNguoiNhan" type="xs:int" />
+              <xs:element minOccurs="0" name="SoTienThuHo" type="xs:int" />
+              <xs:element minOccurs="0" name="CuocChinhCongBo" type="xs:int" />
+              <xs:element minOccurs="0" name="CuocGTGTCongBo" type="xs:int" />
+              <xs:element minOccurs="0" name="GiaVonCuocChinh" type="xs:int" />
+              <xs:element minOccurs="0" name="GiaVonCuocGTGT" type="xs:int" />
+              <xs:element minOccurs="0" name="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MachineName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ContractNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ToPOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AcceptancePOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IsCOD" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RP_AcceptanceReportsForOther">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InsertedDate">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShiftCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReportTargetCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TargetIndex" type="xs:int" />
+              <xs:element name="AcceptancePOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" type="xs:int" />
+              <xs:element minOccurs="0" name="SoLuong" type="xs:int" />
+              <xs:element minOccurs="0" name="KhoiLuong" type="xs:double" />
+              <xs:element minOccurs="0" name="TienMat" type="xs:double" />
+              <xs:element minOccurs="0" name="No" type="xs:double" />
+              <xs:element minOccurs="0" name="VATTienMat" type="xs:double" />
+              <xs:element minOccurs="0" name="VATNo" type="xs:double" />
+              <xs:element name="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Machinename">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CuocChinh" type="xs:double" />
+              <xs:element minOccurs="0" name="CuocVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="CuocGTGT" type="xs:double" />
+              <xs:element minOccurs="0" name="TongCuoc" type="xs:double" />
+              <xs:element minOccurs="0" name="SoLuongNo" type="xs:double" />
+              <xs:element minOccurs="0" name="KhoiLuongNo" type="xs:double" />
+              <xs:element minOccurs="0" name="CuocThuChiHo" type="xs:double" />
+              <xs:element minOccurs="0" name="CuocThuNguoiNhan" type="xs:double" />
+              <xs:element minOccurs="0" name="TienThuHo" type="xs:double" />
+              <xs:element minOccurs="0" name="KhoiLuongQuyDoi" type="xs:double" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RP_CustomerAcceptanceReportsForOther">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InsertedDate">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShiftCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReportTargetCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomerCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TargetIndex" type="xs:int" />
+              <xs:element name="AcceptancePOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" type="xs:int" />
+              <xs:element minOccurs="0" name="SoLuong" type="xs:int" />
+              <xs:element minOccurs="0" name="KhoiLuong" type="xs:double" />
+              <xs:element minOccurs="0" name="TienMat" type="xs:double" />
+              <xs:element minOccurs="0" name="No" type="xs:double" />
+              <xs:element minOccurs="0" name="VATTienMat" type="xs:double" />
+              <xs:element minOccurs="0" name="VATNo" type="xs:double" />
+              <xs:element name="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Machinename">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SAUCK_KHONGVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="SAUCK_COVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="TRUOCCK_COVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="TRUOCCK_KHONGVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="CuocChinh" type="xs:double" />
+              <xs:element minOccurs="0" name="CuocVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="CuocGTGT" type="xs:double" />
+              <xs:element minOccurs="0" name="TongCuoc" type="xs:double" />
+              <xs:element minOccurs="0" name="Test" type="xs:double" />
+              <xs:element minOccurs="0" name="SoLuongNo" type="xs:double" />
+              <xs:element minOccurs="0" name="KhoiLuongNo" type="xs:double" />
+              <xs:element minOccurs="0" name="CuocThuChiHo" type="xs:double" />
+              <xs:element minOccurs="0" name="CuocThuNguoiNhan" type="xs:double" />
+              <xs:element minOccurs="0" name="TienThuHo" type="xs:double" />
+              <xs:element minOccurs="0" name="KhoiLuongQuyDoi" type="xs:double" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:RP_AcceptanceDetailReport" />
+      <xs:field xpath="mstns:TargetIndex" />
+      <xs:field xpath="mstns:InsertedDate" />
+      <xs:field xpath="mstns:POSCode" />
+      <xs:field xpath="mstns:ShiftCode" />
+      <xs:field xpath="mstns:ReportTargetCode" />
+      <xs:field xpath="mstns:ItemCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="RP_AcceptanceReportsForOther_Constraint1">
+      <xs:selector xpath=".//mstns:RP_AcceptanceReportsForOther" />
+      <xs:field xpath="mstns:InsertedDate" />
+      <xs:field xpath="mstns:POSCode" />
+      <xs:field xpath="mstns:ShiftCode" />
+      <xs:field xpath="mstns:ReportTargetCode" />
+      <xs:field xpath="mstns:TargetIndex" />
+      <xs:field xpath="mstns:AcceptancePOSCode" />
+      <xs:field xpath="mstns:Status" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="RP_CustomerAcceptanceReportsForOther_Constraint1">
+      <xs:selector xpath=".//mstns:RP_CustomerAcceptanceReportsForOther" />
+      <xs:field xpath="mstns:InsertedDate" />
+      <xs:field xpath="mstns:POSCode" />
+      <xs:field xpath="mstns:ShiftCode" />
+      <xs:field xpath="mstns:ReportTargetCode" />
+      <xs:field xpath="mstns:CustomerCode" />
+      <xs:field xpath="mstns:TargetIndex" />
+      <xs:field xpath="mstns:AcceptancePOSCode" />
+      <xs:field xpath="mstns:Status" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

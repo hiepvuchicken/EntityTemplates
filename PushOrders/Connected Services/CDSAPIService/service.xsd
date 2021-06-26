@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Management" />
+  <xs:element name="ConvertCurrency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q1:guid" />
+        <xs:element minOccurs="0" name="organizationCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fromCurrencyCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toCurrencyCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertCurrencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConvertCurrencyResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDecisionNameAndCategoryFromCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q2:guid" />
+        <xs:element minOccurs="0" name="decisionCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDecisionNameAndCategoryFromCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetDecisionNameAndCategoryFromCodeResult" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Load">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q4:guid" />
+        <xs:element minOccurs="0" name="postalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customsOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="organizationTypeCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="flow" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partnerPostalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partCountryCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dtFrom" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dtTo" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="zipFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zipTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mailClassCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="onlyWithoutResponse" type="xs:boolean" />
+        <xs:element minOccurs="0" name="onlyWithDeclarationOrResponse" type="xs:boolean" />
+        <xs:element minOccurs="0" name="recordsLimit" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="LoadResult" nillable="true" type="q5:ArrayOfCDSView" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomsStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q6:guid" />
+        <xs:element minOccurs="0" name="postalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="flow" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="forceCreateResponseIfNotAvailable" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomsStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="GetCustomsStatusResult" nillable="true" type="q7:CDSView" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNewDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q8:guid" />
+        <xs:element minOccurs="0" name="postalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customsOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mailFlow" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNewDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="CreateNewDeclarationResult" nillable="true" type="q9:Declaration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q10:guid" />
+        <xs:element minOccurs="0" name="postalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="customsOrgCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNewResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="CreateNewResponseResult" nillable="true" type="q11:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StoreDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q12:guid" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="mailObject" nillable="true" type="q13:MailObject" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="decl" nillable="true" type="q14:Declaration" />
+        <xs:element minOccurs="0" name="evtCd" type="xs:int" />
+        <xs:element minOccurs="0" name="userCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StoreDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="token" type="q15:guid" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="mailObject" nillable="true" type="q16:MailObject" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="resp" nillable="true" type="q17:Response" />
+        <xs:element minOccurs="0" name="evtCd" type="xs:int" />
+        <xs:element minOccurs="0" name="userCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StoreResponseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrUpdateDeclarations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="securityToken" type="q18:guid" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="cdsViews" nillable="true" type="q19:ArrayOfCDSView" />
+        <xs:element minOccurs="0" name="userCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrUpdateDeclarationsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrUpdateResponses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="securityToken" type="q20:guid" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="cdsViews" nillable="true" type="q21:ArrayOfCDSView" />
+        <xs:element minOccurs="0" name="userCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrUpdateResponsesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMailState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="securityToken" type="q22:guid" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="partnerPostalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="flow" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mailState" type="xs:int" />
+        <xs:element minOccurs="0" name="userCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMailStateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertAnonymousToCDSDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="securityToken" type="q23:guid" />
+        <xs:element minOccurs="0" name="anonymousDeclarationId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="internationalItemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertAnonymousToCDSDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHSCodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="securityToken" type="q24:guid" />
+        <xs:element minOccurs="0" name="goodDescription" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHSCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="GetHSCodesResult" nillable="true" type="q25:ArrayOfHSLookupInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestrictionProhibitionByDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="securityToken" type="q26:guid" />
+        <xs:element minOccurs="0" name="destinationPostalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sendingCountryCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="goodDescription" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestrictionProhibitionByDescriptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Management" minOccurs="0" name="GetRestrictionProhibitionByDescriptionResult" nillable="true" type="q27:ArrayOfRestrictionProhibition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestrictionProhibitionByHS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="securityToken" type="q28:guid" />
+        <xs:element minOccurs="0" name="destinationPostalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sendingCountryCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="goodHSCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRestrictionProhibitionByHSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Management" minOccurs="0" name="GetRestrictionProhibitionByHSResult" nillable="true" type="q29:ArrayOfRestrictionProhibition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWatchdogItemInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="securityToken" type="q30:guid" />
+        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWatchdogItemInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="GetWatchdogItemInfoResult" nillable="true" type="q31:WatchdogInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetWatchdogItemInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="securityToken" type="q32:guid" />
+        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destinationPostalOrgCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mailClass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postingDate" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/CDS.BusinessLayer.Operational" minOccurs="0" name="watchdogInfo" nillable="true" type="q33:WatchdogInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetWatchdogItemInfoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5ab2ad85-5f17-49ba-b3d0-182c4d6838ca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://cds.vnpost.vn/CDS.API/CDSAPIService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="71969409-6a7c-4fa7-bb6a-01a8a99312bf" SourceId="1" SourceUrl="http://cds.vnpost.vn/CDS.API/CDSAPIService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d4050cff-1895-4dcf-8f3b-fc1680c09b15" SourceId="1" SourceUrl="http://cds.vnpost.vn/CDS.API/CDSAPIService.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="eaa2cde8-41fe-4075-bedc-dde10c877147" SourceId="1" SourceUrl="http://cds.vnpost.vn/CDS.API/CDSAPIService.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="72f5d706-5033-47b8-9f8d-62dc5348810f" SourceId="1" SourceUrl="http://cds.vnpost.vn/CDS.API/CDSAPIService.svc/mex" />
+    <MetadataFile FileName="CDS.BusinessLayer.Operational.xsd" MetadataType="Schema" ID="354d71e6-bd3d-4adc-8b11-a6570836a142" SourceId="1" SourceUrl="http://cds.vnpost.vn/CDS.API/CDSAPIService.svc/mex" />
+    <MetadataFile FileName="PTC.BusinessLayer.Core.xsd" MetadataType="Schema" ID="9dd1eb80-1196-4e6f-beeb-5f6386450915" SourceId="1" SourceUrl="http://cds.vnpost.vn/CDS.API/CDSAPIService.svc/mex" />
+    <MetadataFile FileName="CDS.BusinessLayer.Management.xsd" MetadataType="Schema" ID="477df3be-aee5-4800-8922-58d52d1ceca9" SourceId="1" SourceUrl="http://cds.vnpost.vn/CDS.API/CDSAPIService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/BatchDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:mstns="http://tempuri.org/BatchDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/BatchDataSet.xsd" id="BatchDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="BatchDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Batch">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BatchCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CustomerCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="17" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OrderCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MainFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="Discount" type="xs:double" />
+              <xs:element minOccurs="0" name="Abatement" type="xs:double" />
+              <xs:element minOccurs="0" name="TotalFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="InvoiceAttached" type="xs:boolean" />
+              <xs:element minOccurs="0" name="OtherAttached" type="xs:boolean" />
+              <xs:element minOccurs="0" name="OtherAttachedInfor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetailItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemIndex" type="xs:int" />
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+              <xs:element minOccurs="0" name="Amount" type="xs:double" />
+              <xs:element minOccurs="0" name="Unit">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Price" type="xs:double" />
+              <xs:element minOccurs="0" name="TaxCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OriginalCountryCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ChemicalTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ChemicalItemName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ChemicalName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Weight" type="xs:double" />
+              <xs:element minOccurs="0" name="DetailItemName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Width" type="xs:double" />
+              <xs:element minOccurs="0" name="Height" type="xs:double" />
+              <xs:element minOccurs="0" name="Length" type="xs:double" />
+              <xs:element minOccurs="0" name="LightItem" type="xs:double" />
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element msprop:Generator_RowEvHandlerName="ItemRowChangeEventHandler" msprop:Generator_UserTableName="Item" msprop:Generator_TablePropName="Item" msprop:Generator_RowEvArgName="ItemRowChangeEvent" msprop:Generator_TableVarName="tableItem" msprop:Generator_RowClassName="ItemRow" msprop:Generator_TableClassName="ItemDataTable" name="Item">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AcceptancePOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SenderFullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CustomerCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="17" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="BatchCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReceiverFullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverTel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReceiverAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="isDomestic" type="xs:boolean" />
+              <xs:element minOccurs="0" name="CountryCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IsStatePrice" type="xs:boolean" />
+              <xs:element minOccurs="0" name="StatePriceValue" type="xs:double" />
+              <xs:element name="SendingContent">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SendingTime" type="xs:dateTime" />
+              <xs:element name="IsAirmail" type="xs:boolean" />
+              <xs:element name="Weight" type="xs:double" />
+              <xs:element minOccurs="0" name="Status" type="xs:unsignedByte" />
+              <xs:element name="TotalFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="EmployeeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderJob">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ProvinceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LightItem" type="xs:double" />
+              <xs:element minOccurs="0" name="SectionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverJob">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IsOpened" type="xs:boolean" />
+              <xs:element minOccurs="0" name="CertificateNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LicenseNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InvoiceNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderIdentification">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderIssueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SenderIssueCountry">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverIdentification">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverIssueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ReceiverIssueCountry">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderTel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MainFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="VATFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="SubFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="IsPostFree" type="xs:boolean" />
+              <xs:element minOccurs="0" name="StatePriceFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="PrintedNumber" type="xs:int" />
+              <xs:element minOccurs="0" name="DataCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderCustomReference">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RemainingFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="ReceiverCustomReference">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IsReturn" type="xs:boolean" />
+              <xs:element minOccurs="0" name="IsCompensate" type="xs:boolean" />
+              <xs:element minOccurs="0" name="IsForward" type="xs:boolean" />
+              <xs:element minOccurs="0" name="IsAirmailForward" type="xs:boolean" />
+              <xs:element minOccurs="0" name="IsAirmailReturn" type="xs:boolean" />
+              <xs:element minOccurs="0" name="IsDebt" type="xs:boolean" />
+              <xs:element minOccurs="0" name="MachineName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AcceptedIndex" type="xs:int" />
+              <xs:element minOccurs="0" name="BC16Index" type="xs:int" />
+              <xs:element minOccurs="0" name="IncomingIndex" type="xs:int" />
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverDistrictCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LetterMoneyOrderFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="ValueAddedServiceFreightTotalFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OrderCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderAddressCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReceiverAddressCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderMobile">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderFax">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SenderEmail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverMobile">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverFax">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverEmail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Discount" type="xs:double" />
+              <xs:element minOccurs="0" name="Abatement" type="xs:double" />
+              <xs:element minOccurs="0" name="UndeliverableGuide" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="Width" type="xs:double" />
+              <xs:element minOccurs="0" name="Height" type="xs:double" />
+              <xs:element minOccurs="0" name="Length" type="xs:double" />
+              <xs:element minOccurs="0" name="CheckSum">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ItemNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ExchangeRateCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CODAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CODPayment" type="xs:boolean" />
+              <xs:element minOccurs="0" name="SenderDistrictCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverContact">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="UndeliverableReason">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DecisionNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DecisionDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ReturnDayNumber" type="xs:int" />
+              <xs:element minOccurs="0" name="DiscountPercentage" type="xs:double" />
+              <xs:element minOccurs="0" name="DiscountAmount" type="xs:double" />
+              <xs:element minOccurs="0" name="ExecuteOrder">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InvoiceAttached" type="xs:boolean" />
+              <xs:element minOccurs="0" name="OtherAttached" type="xs:boolean" />
+              <xs:element minOccurs="0" name="OtherAttachedInfor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransferMachine">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransferUser">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransferPOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransferDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TransferStatus" type="xs:boolean" />
+              <xs:element minOccurs="0" name="TransferTimes" type="xs:int" />
+              <xs:element minOccurs="0" name="WeightConvert" type="xs:double" />
+              <xs:element minOccurs="0" name="IsDiscount" type="xs:boolean" />
+              <xs:element minOccurs="0" name="InvoiceExport" type="xs:boolean" />
+              <xs:element minOccurs="0" name="Total" type="xs:double" />
+              <xs:element minOccurs="0" name="AcceptedType" type="xs:int" />
+              <xs:element minOccurs="0" name="SenderTaxCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VATPercentage" type="xs:double" />
+              <xs:element minOccurs="0" name="FuelSurchargeFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="FarRegionFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="AirSurchargeFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OtherFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="TotalFreightVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="TotalFreightDiscount" type="xs:double" />
+              <xs:element minOccurs="0" name="TotalFreightDiscountVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="ReceiverTaxCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FarRegion" type="xs:boolean" />
+              <xs:element minOccurs="0" name="IsCollection" type="xs:boolean" />
+              <xs:element minOccurs="0" name="CustomerAccountNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IsFeedback" type="xs:boolean" />
+              <xs:element minOccurs="0" name="FeedbackPercentage" type="xs:double" />
+              <xs:element minOccurs="0" name="FeedbackAmount" type="xs:double" />
+              <xs:element minOccurs="0" name="PaymentFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="PaymentFreightVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="PaymentFreightDiscount" type="xs:double" />
+              <xs:element minOccurs="0" name="PaymentFreightDiscountVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="RemainingFreightVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="RemainingFreightDiscount" type="xs:double" />
+              <xs:element minOccurs="0" name="RemainingFreightDiscountVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="DeliveryCounter" type="xs:boolean" />
+              <xs:element minOccurs="0" name="AdviceOfReceiptCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverCommuneCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CheckContentOnDeliveryCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DestinationPOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IsAffair" type="xs:boolean" />
+              <xs:element minOccurs="0" name="ReturnBeforeDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CustomerGroupCode" type="xs:string" />
+              <xs:element minOccurs="0" name="OrtherFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalMainFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalSubFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalFuelSurchargeFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalFarRegionFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalAirSurchargeFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalVATFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalVATPercentage" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalTotalFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalTotalFreightVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalTotalFreightDiscount" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalTotalFreightDiscountVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalPaymentFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalPaymentFreightVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalPaymentFreightDiscount" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalPaymentFreightDiscountVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalRemainingFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalRemainingFreightVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalRemainingFreightDiscount" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalRemainingFreightDiscountVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="IsEcommerce" type="xs:boolean" />
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ReceiverCustomerCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="17" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DeliveryNote">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemCommodityType">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommodityTypeCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemPropertyValue">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PropertyCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Value">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemVASPropertyValue">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PropertyCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Value">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TraceItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TraceIndex" type="xs:int" />
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Status" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="TraceDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="StatusDesc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransferMachine">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransferUser">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransferPOSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransferDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TransferStatus" type="xs:boolean" />
+              <xs:element minOccurs="0" name="TransferTimes" type="xs:int" />
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ValueAddedServiceItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueAddedServiceCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Freight" type="xs:double" />
+              <xs:element minOccurs="0" name="PhaseCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AddedDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FreightVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="OriginalFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalFreightVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="SubFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="SubFreightVAT" type="xs:double" />
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="OriginalSubFreight" type="xs:double" />
+              <xs:element minOccurs="0" name="OriginalSubFreightVAT" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TraceTransactionsCollection">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TraceIndex" type="xs:int" />
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TraceDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Status" type="xs:int" />
+              <xs:element name="TransactionsCollectionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Channel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TransactionsCollection">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionsCollectionCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransactionsCollectionDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="POSCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TransactionsCollectionChannel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverCustomerCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="17" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverFullName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverTel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverCertificateType" type="xs:int" />
+              <xs:element minOccurs="0" name="ReceiverCertificateNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverCertificateIssueDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ReceiverCertificatePlace">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ReceiverCertificateOtherName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SortingItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POSCode" type="xs:string" />
+              <xs:element name="ItemCode" type="xs:string" />
+              <xs:element name="SortingCode" type="xs:string" />
+              <xs:element name="Type" type="xs:int" />
+              <xs:element minOccurs="0" name="CreateTime" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="LastUpdatedTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Batch" />
+      <xs:field xpath="mstns:BatchCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DetailItem_Constraint1">
+      <xs:selector xpath=".//mstns:DetailItem" />
+      <xs:field xpath="mstns:ItemIndex" />
+      <xs:field xpath="mstns:ItemCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Item_Constraint1">
+      <xs:selector xpath=".//mstns:Item" />
+      <xs:field xpath="mstns:ItemCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ItemCommodityType_Constraint1">
+      <xs:selector xpath=".//mstns:ItemCommodityType" />
+      <xs:field xpath="mstns:ItemCode" />
+      <xs:field xpath="mstns:CommodityTypeCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ItemPropertyValue_Constraint1">
+      <xs:selector xpath=".//mstns:ItemPropertyValue" />
+      <xs:field xpath="mstns:ItemCode" />
+      <xs:field xpath="mstns:PropertyCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ItemVASPropertyValue_Constraint1">
+      <xs:selector xpath=".//mstns:ItemVASPropertyValue" />
+      <xs:field xpath="mstns:ItemCode" />
+      <xs:field xpath="mstns:PropertyCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="TraceItem_Constraint1">
+      <xs:selector xpath=".//mstns:TraceItem" />
+      <xs:field xpath="mstns:TraceIndex" />
+      <xs:field xpath="mstns:ItemCode" />
+      <xs:field xpath="mstns:POSCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="ValueAddedServiceItem_Constraint1">
+      <xs:selector xpath=".//mstns:ValueAddedServiceItem" />
+      <xs:field xpath="mstns:ServiceCode" />
+      <xs:field xpath="mstns:ValueAddedServiceCode" />
+      <xs:field xpath="mstns:ItemCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="TraceTransactionsCollection_Constraint1">
+      <xs:selector xpath=".//mstns:TraceTransactionsCollection" />
+      <xs:field xpath="mstns:TraceIndex" />
+      <xs:field xpath="mstns:ItemCode" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="TransactionsCollection_Constraint1">
+      <xs:selector xpath=".//mstns:TransactionsCollection" />
+      <xs:field xpath="mstns:TransactionsCollectionCode" />
+      <xs:field xpath="mstns:ItemCode" />
+    </xs:unique>
+    <xs:unique name="SortingItemKey1">
+      <xs:selector xpath=".//mstns:SortingItem" />
+      <xs:field xpath="mstns:POSCode" />
+      <xs:field xpath="mstns:ItemCode" />
+      <xs:field xpath="mstns:SortingCode" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_DetailItem_Item" msdata:parent="Item" msdata:child="DetailItem" msdata:parentkey="ItemCode" msdata:childkey="ItemCode" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK_ItemCommodityType_Item" msdata:parent="Item" msdata:child="ItemCommodityType" msdata:parentkey="ItemCode" msdata:childkey="ItemCode" />
+      <msdata:Relationship name="FK_ItemPropertyValue_Item" msdata:parent="Item" msdata:child="ItemPropertyValue" msdata:parentkey="ItemCode" msdata:childkey="ItemCode" />
+      <msdata:Relationship name="FK_ItemVASPropertyValue_Item" msdata:parent="Item" msdata:child="ItemVASPropertyValue" msdata:parentkey="ItemCode" msdata:childkey="ItemCode" />
+      <msdata:Relationship name="FK_TraceItem_Item" msdata:parent="Item" msdata:child="TraceItem" msdata:parentkey="ItemCode" msdata:childkey="ItemCode" />
+      <msdata:Relationship name="FK_ValueAddedServiceItem_Item" msdata:parent="Item" msdata:child="ValueAddedServiceItem" msdata:parentkey="ItemCode" msdata:childkey="ItemCode" />
+      <msdata:Relationship name="FK_TraceTransactionsCollection_TransactionsCollection" msdata:parent="TransactionsCollection" msdata:child="TraceTransactionsCollection" msdata:parentkey="TransactionsCollectionCode ItemCode" msdata:childkey="TransactionsCollectionCode ItemCode" />
+      <msdata:Relationship name="FK_TransactionsCollection_Item" msdata:parent="Item" msdata:child="TransactionsCollection" msdata:parentkey="ItemCode" msdata:childkey="ItemCode" />
+      <msdata:Relationship name="Item_SortingItem" msdata:parent="Item" msdata:child="SortingItem" msdata:parentkey="ItemCode" msdata:childkey="ItemCode" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

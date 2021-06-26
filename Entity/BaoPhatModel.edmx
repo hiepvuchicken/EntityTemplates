@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBBAOPHATModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="service_process_LoadItemDetails_printf" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PostmanCode" Type="varchar" Mode="In" />
+          <Parameter Name="StartingCode" Type="varchar" Mode="In" />
+          <Parameter Name="FrDate" Type="varchar" Mode="In" />
+          <Parameter Name="ToDate" Type="varchar" Mode="In" />
+          <Parameter Name="TrangThai" Type="int" Mode="In" />
+        </Function>
+        <Function Name="service_process_LoadItemDetails_printf_v3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PostmanCode" Type="varchar" Mode="In" />
+          <Parameter Name="StartingCode" Type="varchar" Mode="In" />
+          <Parameter Name="FrDate" Type="varchar" Mode="In" />
+          <Parameter Name="ToDate" Type="varchar" Mode="In" />
+          <Parameter Name="TrangThai" Type="int" Mode="In" />
+        </Function>
+        <Function Name="service_process_LoadItemForPosman_printf_v2_dev" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PostmanCode" Type="varchar" Mode="In" />
+          <Parameter Name="itemcodes" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="service_process_LoadItemList_printf" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PostmanCode" Type="varchar" Mode="In" />
+          <Parameter Name="StartingCode" Type="varchar" Mode="In" />
+          <Parameter Name="date" Type="varchar" Mode="In" />
+          <Parameter Name="SheetNumber" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="service_process_LoadItemList_printf_dev" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PostmanCode" Type="varchar" Mode="In" />
+          <Parameter Name="StartingCode" Type="varchar" Mode="In" />
+          <Parameter Name="date" Type="varchar" Mode="In" />
+          <Parameter Name="SheetNumber" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="DBBAOPHATModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBBAOPHATModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DBBAOPHATEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="service_process_LoadItemDetails_printf">
+            <Parameter Name="PostmanCode" Mode="In" Type="String" />
+            <Parameter Name="StartingCode" Mode="In" Type="String" />
+            <Parameter Name="FrDate" Mode="In" Type="String" />
+            <Parameter Name="ToDate" Mode="In" Type="String" />
+            <Parameter Name="TrangThai" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="service_process_LoadItemDetails_printf_v3" ReturnType="Collection(DBBAOPHATModel.service_process_LoadItemDetails_printf_v3_Result)">
+            <Parameter Name="PostmanCode" Mode="In" Type="String" />
+            <Parameter Name="StartingCode" Mode="In" Type="String" />
+            <Parameter Name="FrDate" Mode="In" Type="String" />
+            <Parameter Name="ToDate" Mode="In" Type="String" />
+            <Parameter Name="TrangThai" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="service_process_LoadItemForPosman_printf_v2_dev" ReturnType="Collection(DBBAOPHATModel.service_process_LoadItemForPosman_printf_v2_dev_Result)">
+            <Parameter Name="PostmanCode" Mode="In" Type="String" />
+            <Parameter Name="itemcodes" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="service_process_LoadItemList_printf" ReturnType="Collection(DBBAOPHATModel.service_process_LoadItemList_printf_Result)">
+            <Parameter Name="PostmanCode" Mode="In" Type="String" />
+            <Parameter Name="StartingCode" Mode="In" Type="String" />
+            <Parameter Name="date" Mode="In" Type="String" />
+            <Parameter Name="SheetNumber" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="service_process_LoadItemList_printf_dev" ReturnType="Collection(DBBAOPHATModel.service_process_LoadItemList_printf_dev_Result)">
+            <Parameter Name="PostmanCode" Mode="In" Type="String" />
+            <Parameter Name="StartingCode" Mode="In" Type="String" />
+            <Parameter Name="date" Mode="In" Type="String" />
+            <Parameter Name="SheetNumber" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="service_process_LoadItemDetails_printf_v3_Result">
+          <Property Type="Int64" Name="STT" Nullable="true" />
+          <Property Type="String" Name="BC" Nullable="true" MaxLength="107" />
+          <Property Type="String" Name="TUYENPHAT" Nullable="true" MaxLength="18" />
+          <Property Type="String" Name="MailtripNumber" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="FullName" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Ngay" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ItemCode" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="Receiverinfo" Nullable="true" MaxLength="601" />
+          <Property Type="String" Name="ReceiverTel" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="SendingContent" Nullable="true" MaxLength="500" />
+          <Property Type="Double" Name="Weight" Nullable="true" />
+          <Property Type="String" Name="DVGTGT" Nullable="true" MaxLength="500" />
+          <Property Type="Double" Name="CODAmount" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="service_process_LoadItemForPosman_printf_v2_dev_Result">
+          <Property Type="Int64" Name="STT" Nullable="true" />
+          <Property Type="String" Name="BC" Nullable="true" MaxLength="107" />
+          <Property Type="String" Name="FullName" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Ngay" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ItemCode" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="Receiverinfo" Nullable="true" MaxLength="601" />
+          <Property Type="String" Name="receiverPhone" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="SendingContent" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="totalFreight" Nullable="true" />
+          <Property Type="String" Name="DVGTGT" Nullable="true" MaxLength="500" />
+          <Property Type="Double" Name="CODAmount" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="service_process_LoadItemList_printf_Result">
+          <Property Type="Int64" Name="STT" Nullable="true" />
+          <Property Type="String" Name="BC" Nullable="true" MaxLength="107" />
+          <Property Type="String" Name="FullName" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Ngay" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ItemCode" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="Receiverinfo" Nullable="true" MaxLength="601" />
+          <Property Type="String" Name="receiverPhone" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="SendingContent" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="totalFreight" Nullable="true" />
+          <Property Type="String" Name="DVGTGT" Nullable="true" MaxLength="500" />
+          <Property Type="Double" Name="CODAmount" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="service_process_LoadItemList_printf_dev_Result">
+          <Property Type="String" Name="STT" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="BC" Nullable="true" MaxLength="107" />
+          <Property Type="String" Name="FullName" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Ngay" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ItemCode" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="Receiverinfo" Nullable="true" MaxLength="601" />
+          <Property Type="String" Name="receiverPhone" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="SendingContent" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="totalFreight" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="DVGTGT" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="CODAmount" Nullable="true" MaxLength="10" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBBAOPHATModelStoreContainer" CdmEntityContainer="DBBAOPHATEntities" >
+          <FunctionImportMapping FunctionImportName="service_process_LoadItemDetails_printf" FunctionName="DBBAOPHATModel.Store.service_process_LoadItemDetails_printf" />
+          <FunctionImportMapping FunctionImportName="service_process_LoadItemDetails_printf_v3" FunctionName="DBBAOPHATModel.Store.service_process_LoadItemDetails_printf_v3">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBBAOPHATModel.service_process_LoadItemDetails_printf_v3_Result">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="BC" ColumnName="BC" />
+                <ScalarProperty Name="TUYENPHAT" ColumnName="TUYENPHAT" />
+                <ScalarProperty Name="MailtripNumber" ColumnName="MailtripNumber" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Receiverinfo" ColumnName="Receiverinfo" />
+                <ScalarProperty Name="ReceiverTel" ColumnName="ReceiverTel" />
+                <ScalarProperty Name="SendingContent" ColumnName="SendingContent" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="DVGTGT" ColumnName="DVGTGT" />
+                <ScalarProperty Name="CODAmount" ColumnName="CODAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="service_process_LoadItemForPosman_printf_v2_dev" FunctionName="DBBAOPHATModel.Store.service_process_LoadItemForPosman_printf_v2_dev">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBBAOPHATModel.service_process_LoadItemForPosman_printf_v2_dev_Result">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="BC" ColumnName="BC" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Receiverinfo" ColumnName="Receiverinfo" />
+                <ScalarProperty Name="receiverPhone" ColumnName="receiverPhone" />
+                <ScalarProperty Name="SendingContent" ColumnName="SendingContent" />
+                <ScalarProperty Name="totalFreight" ColumnName="totalFreight" />
+                <ScalarProperty Name="DVGTGT" ColumnName="DVGTGT" />
+                <ScalarProperty Name="CODAmount" ColumnName="CODAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="service_process_LoadItemList_printf" FunctionName="DBBAOPHATModel.Store.service_process_LoadItemList_printf">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBBAOPHATModel.service_process_LoadItemList_printf_Result">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="BC" ColumnName="BC" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Receiverinfo" ColumnName="Receiverinfo" />
+                <ScalarProperty Name="receiverPhone" ColumnName="receiverPhone" />
+                <ScalarProperty Name="SendingContent" ColumnName="SendingContent" />
+                <ScalarProperty Name="totalFreight" ColumnName="totalFreight" />
+                <ScalarProperty Name="DVGTGT" ColumnName="DVGTGT" />
+                <ScalarProperty Name="CODAmount" ColumnName="CODAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="service_process_LoadItemList_printf_dev" FunctionName="DBBAOPHATModel.Store.service_process_LoadItemList_printf_dev">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBBAOPHATModel.service_process_LoadItemList_printf_dev_Result">
+                <ScalarProperty Name="STT" ColumnName="STT" />
+                <ScalarProperty Name="BC" ColumnName="BC" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Receiverinfo" ColumnName="Receiverinfo" />
+                <ScalarProperty Name="receiverPhone" ColumnName="receiverPhone" />
+                <ScalarProperty Name="SendingContent" ColumnName="SendingContent" />
+                <ScalarProperty Name="totalFreight" ColumnName="totalFreight" />
+                <ScalarProperty Name="DVGTGT" ColumnName="DVGTGT" />
+                <ScalarProperty Name="CODAmount" ColumnName="CODAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

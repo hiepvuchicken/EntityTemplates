@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/PayPostDataSet.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/PayPostDataSet.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/PayPostDataSet.xsd" id="PayPostDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="PayPostDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PAYMENT_RESULT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="ERROR_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ERROR_MSG" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PARCEL_INFO_BULK">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PARCEL_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ISSUE_DATE" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TRANS_AMOUNT" type="xs:double" />
+              <xs:element minOccurs="0" name="CUSTOMER_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_ADDRESS" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_PHONE" type="xs:string" />
+              <xs:element minOccurs="0" name="BULK_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="SERVICE_CODE" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PARCEL_INFO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PARCEL_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ISSUE_DATE" type="xs:string" />
+              <xs:element minOccurs="0" name="TRANS_AMOUNT" type="xs:double" />
+              <xs:element minOccurs="0" name="CUSTOMER_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_NAME" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_ADDRESS" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_PHONE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_ID_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_ID_NUMBER" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_ID_DATE" type="xs:string" />
+              <xs:element minOccurs="0" name="PAYER_ID_WHERE" type="xs:string" />
+              <xs:element minOccurs="0" name="ERROR_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="TRANS_TIME" type="xs:string" />
+              <xs:element minOccurs="0" name="TRANS_REF_NO" type="xs:string" />
+              <xs:element minOccurs="0" name="REASON" type="xs:string" />
+              <xs:element msdata:Caption="PAYMENT_COMPLETED2222" minOccurs="0" name="PAYMENT_COMPLETED" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PARCEL_INFO_NEW">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SERVICE_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="PARCEL_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ORDER_CODE" type="xs:string" />
+              <xs:element minOccurs="0" name="ACCEPT_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="SERVICE_TYPE" type="xs:string" />
+              <xs:element minOccurs="0" name="PARCEL_AMOUNT" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn2" minOccurs="0" name="MAIN_POSTAGE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn3" minOccurs="0" name="ADDED_POSTAGE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn4" minOccurs="0" name="TRANS_FEE" type="xs:string" />
+              <xs:element msdata:Caption="ADED_FEE" minOccurs="0" name="ADDED_FEE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn1" minOccurs="0" name="TRANS_AMOUNT" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn1" minOccurs="0" name="SENDER_CUSTOMER_CODE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn2" minOccurs="0" name="SENDER_NAME" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn3" minOccurs="0" name="SENDER_ADDRESS" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn1" minOccurs="0" name="SENDER_PHONE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn2" minOccurs="0" name="SENDER_ID_TYPE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn3" minOccurs="0" name="SENDER_ID_NUMBER" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn4" minOccurs="0" name="SENDER_ID_DATE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn4" minOccurs="0" name="SENDER_ID_WHERE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn1" minOccurs="0" name="RECEIVER_CUSTOMER_CODE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn2" minOccurs="0" name="RECEIVER_NAME" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn3" minOccurs="0" name="RECEIVER_ADDRESS" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn1" minOccurs="0" name="RECEIVER_PHONE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn2" minOccurs="0" name="RECEIVER_ID_TYPE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn3" minOccurs="0" name="RECEIVER_ID_NUMBER" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn4" minOccurs="0" name="RECEIVER_ID_DATE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn4" minOccurs="0" name="RECEIVER_ID_WHERE" type="xs:string" />
+              <xs:element minOccurs="0" name="PERSON_PAY_POSTAGE" type="xs:string" />
+              <xs:element minOccurs="0" name="PERSON_PAY_FEE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn4" minOccurs="0" name="PO_CODE_ISSUE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn4" minOccurs="0" name="BRANCH_CODE_DELIVERY" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn4" minOccurs="0" name="ISSUE_DATE" type="xs:string" />
+              <xs:element msdata:Caption="DataColumn4" minOccurs="0" name="CONTENTS" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

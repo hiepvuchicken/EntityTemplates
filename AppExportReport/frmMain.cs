@@ -98,7 +98,7 @@ namespace AppExportReport
 
                         if (dataSet.Tables[0].Rows.Count > 0)
                         {
-                            for (int i = 0; i < 3; i++)
+                            for (int i = 0; i < 2; i++)
                             {
                                 dataSet.Tables[0].Rows[0].Delete();
                                 dataSet.Tables[0].AcceptChanges();
@@ -322,21 +322,9 @@ namespace AppExportReport
                         }
                     }
 
-                    //if (dr[10].ToString().Length > 7)
-                    //{
-                    //    replaceDict.Add("#requestcode#", dr[10].ToString().Substring(0, 7));
-                    //    replaceDict.Add("#requestdesc#", dr[10].ToString());
-                    //}
-                    //else
-                    //{
-                    //    replaceDict.Add("#requestcode#", dr[10].ToString());
-                    //    replaceDict.Add("#requestdesc#", dr[10].ToString());
-                    //}
-
                     replaceDict.Add("#receiver#", txtReceiver.Text.Trim());
                     replaceDict.Add("#month#", txtMonth.Text.Trim());
                     replaceDict.Add("#contractnumber#", txtContractNumber.Text.ToString());
-
 
                     //initialize word object  
                     Document document = new Document();
@@ -350,7 +338,6 @@ namespace AppExportReport
                         document.Replace(kvp.Key, kvp.Value, true, true);
                     }
                     //Save doc file.  
-                    // document.SaveToFile(txtPathSave.Text.Trim() + @"\" + filename + ".docx", FileFormat.Docx);
                     document.SaveToFile(txtPathSave.Text.Trim() + @"\" + filename + ".pdf", FileFormat.PDF);
                     document.Close();
 
